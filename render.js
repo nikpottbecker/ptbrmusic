@@ -156,19 +156,19 @@ function vertical(s, animate) {
   const head = words.map((w, i) => `<span ${animate ? `class="w a-up" style="animation-delay:${(0.55 + i * 0.07).toFixed(2)}s"` : 'class="w"'}>${w}</span>`).join(' ');
   const after = 0.55 + words.length * 0.07 + 0.25;
   const photo = s.photo
-    ? `<div style="position:absolute;inset:0 0 820px 0;overflow:hidden"><div ${animate ? 'style="position:absolute;inset:0;animation:zoom 8s linear both;' : 'style="position:absolute;inset:0;'}background:#111 url('${fileUrl(s.photo)}') ${s.focus || '50% 25%'}/cover"></div></div>`
+    ? `<div style="position:absolute;inset:0 0 1100px 0;overflow:hidden"><div ${animate ? 'style="position:absolute;inset:0;animation:zoom 8s linear both;' : 'style="position:absolute;inset:0;'}background:#111 url('${fileUrl(s.photo)}') ${s.focus || '50% 25%'}/cover"></div></div>`
     : '';
   const bg = s.photo ? '#fff' : t.bg, fg = s.photo ? '#111' : t.fg, muted = s.photo ? '#4a4a46' : t.muted;
   return `<div class="v" style="background:${bg};color:${fg}">
 ${photo}
 <div style="position:absolute;top:72px;left:64px;right:64px" class="top"><div ${A('a-fade', 0.05)}">${brand}</div>${s.artist ? `<div ${A('a-fade', 0.15)}"><div class="pill" style="${s.photo ? '' : t.pill}">${esc(s.artist)}</div></div>` : ''}</div>
-<div style="position:absolute;left:64px;right:64px;${s.photo ? 'top:1140px' : 'top:0;bottom:0'};display:flex;flex-direction:column;justify-content:center;gap:40px">
+<div class="fit" style="position:absolute;left:64px;right:160px;${s.photo ? 'top:860px;bottom:530px' : 'top:180px;bottom:530px'};display:flex;flex-direction:column;justify-content:center;gap:36px">
 <div ${A('a-pop', 0.3)};align-self:flex-start"><div class="tag" style="${s.photo ? '' : t.tagStyle}">${esc(s.tag || 'NEWS')}</div></div>
 <h1 style="font-size:${s.photo ? Math.round(hs * 0.78) : hs}px;line-height:1;letter-spacing:-.045em">${head}</h1>
 ${s.subline ? `<p ${A('a-fade', after.toFixed(2))};margin:0;font-size:40px;line-height:1.35;color:${muted}">${esc(s.subline)}</p>` : ''}
 </div>
-<div ${A('a-fade', (after + 0.4).toFixed(2))};position:absolute;left:64px;right:64px;bottom:150px;display:flex;justify-content:space-between;font-size:26px;color:${s.photo ? '#62625d' : t.foot}"><span>${esc(s.source)}</span><span>${esc(s.date)}</span></div>
-<div style="position:absolute;left:64px;right:64px;bottom:96px;height:6px;border-radius:3px;background:${s.photo ? '#e4e4e0' : t.line};overflow:hidden"><div style="height:100%;background:${fg};transform-origin:left;${animate ? 'animation:bar 8s linear both' : ''}"></div></div>
+<div ${A('a-fade', (after + 0.4).toFixed(2))};position:absolute;left:64px;right:160px;bottom:470px;display:flex;justify-content:space-between;font-size:26px;color:${s.photo ? '#62625d' : t.foot}"><span>${esc(s.source)}</span><span>${esc(s.date)}</span></div>
+<div style="position:absolute;left:64px;right:160px;bottom:430px;height:6px;border-radius:3px;background:${s.photo ? '#e4e4e0' : t.line};overflow:hidden"><div style="height:100%;background:${fg};transform-origin:left;${animate ? 'animation:bar 8s linear both' : ''}"></div></div>
 </div>`;
 }
 
@@ -181,7 +181,7 @@ async function shoot(page, html, out, w, h) {
   await page.evaluate(() => document.fonts.ready);
   await page.waitForTimeout(250);
   for (let i = 0; i < 12; i++) { // overflow guard
-    const over = await page.evaluate(H => [...document.body.querySelectorAll('*')].some(el => el.getBoundingClientRect().bottom > H + 1), h);
+    const over = await page.evaluate(H => [...document.body.querySelectorAll('*')].some(el => el.getBoundingClientRect().bottom > H + 1) || [...document.querySelectorAll('.fit')].some(el => el.scrollHeight > el.clientHeight + 1), h);
     if (!over) break;
     await page.evaluate(() => { const e = document.querySelector('h1'); e.style.fontSize = (parseFloat(getComputedStyle(e).fontSize) * 0.92) + 'px'; });
   }
