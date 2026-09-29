@@ -1,0 +1,1 @@
+{ "name": "sidechain-media", "private": true, "dependencies": { "geist": "^1.3.1" } }
