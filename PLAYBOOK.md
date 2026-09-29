@@ -1,72 +1,91 @@
-# Sidechain – täglicher Auto-Lauf
+# Sidechain – täglicher Auto-Lauf (v2)
 
-Instagram: **@sidechain.news** · Metricool brand/blogId: **7154946** · Zeitzone: **Europe/Berlin**
-Sprache: **Deutsch** (Artist-Namen, Track- und Albumtitel bleiben im Original).
+Instagram: **@sidechain.news** · Metricool blogId: **7154946** · Zeitzone: **Europe/Berlin**
+Sprache: **Deutsch** (Artist-Namen, Track- und Albumtitel im Original).
 Positionierung: der deutschsprachige News-Kanal für elektronische Musik – kurz, sauber, verlässlich.
+Phase: **Aufbau bis Traktion** (Ziel 2.500 Follower). Reichweite bei Nicht-Followern hat Vorrang.
+
+## Learnings (wird jeden Sonntag von der Wochenanalyse aktualisiert – hat Vorrang vor den Regeln unten)
+- Noch keine Daten. Erste Auswertung am Sonntag, 04.10.2026.
 
 ## 0. Setup (jeder Lauf startet in einer frischen Umgebung)
 1. `add_repo` owner `nikpottbecker`, repo `ptbrmusic`, access `push`.
 2. `git clone --depth 20 -b sidechain-media https://github.com/nikpottbecker/ptbrmusic /home/claude/sc && cd /home/claude/sc && npm i --silent`
-   Playwright/Chromium ist vorinstalliert (kein `playwright install`).
-3. Metricool-Tools per ToolSearch laden (`metricool`).
+   Playwright/Chromium und ffmpeg sind vorinstalliert (kein `playwright install`).
+3. Metricool-Tools per ToolSearch laden (`metricool`). `getBrandSettings` → welche Netzwerke verbunden sind (instagram, ggf. threads, tiktok).
 
-## 1. Duplikate vermeiden
-`posted.json` lesen. Keine Story posten, deren Kern (Artist + Ereignis) dort in den letzten 30 Tagen schon vorkommt.
-Außerdem `getScheduledPosts` für heute und morgen prüfen (bereits eingeplante Posts zählen mit).
+## 1. Tagesplan
+| Slot | Zeitfenster | Inhalt | Format |
+|---|---|---|---|
+| A | beste Stunde 07–13 Uhr | stärkste Story des Tages | **Reel** (`format: "reel"`) |
+| B | beste Stunde 16–21 Uhr (≥ 5 h nach A) | zweite Story – oder an Wochenformat-Tagen das Karussell | News-Bild / Karussell |
+| Story | je 60 min nach A und B | dieselbe News als Story | `format: "story"` |
 
-## 2. Recherche (nur die letzten 48 Stunden)
-- WebSearch zu den Artists der Watchlist und allgemein („electronic music news“, „dance music news today“, „neue Tour Deutschland Techno/House“).
-- Gute Quellen: offizielle Label-Pressseiten (z. B. press.atlanticrecords.com), Resident Advisor, Mixmag, DJ Mag, EDM.com, Dancing Astronaut, Billboard Dance, Groove, FAZEmag, Songkick/Ticketmaster für Termine.
-- Jede Story per WebFetch im Originalartikel prüfen: Datum ≤ 48 h, Fakten stehen wirklich dort.
-- **Tabu:** Gerüchte, Leaks, Privatleben, Gesundheit, Rechtsstreit, Todesmeldungen ohne Bestätigung durch mehrere große Medien, erfundene oder zugespitzte Zitate.
+**Wochenformate (Slot B):**
+- **Montag – „Tour-Radar“:** Karussell mit neuen Terminen in DACH aus den letzten 7 Tagen (Songkick, Ticketmaster/Eventim, Artist-Seiten). Ein Slide pro Artist: title = Artist, detail = Stadt + Venue, meta = Datum.
+- **Mittwoch – „Hintergrund“:** Karussell „Wer ist …?“ zu einem Artist, der gerade in den News ist: 4–6 Slides mit belegten Fakten (Herkunft, Durchbruch, wichtigste Releases, aktuelle Tour).
+- **Freitag – „New Music Friday“:** Karussell mit den 5–8 wichtigsten Releases der Woche (kicker = SINGLE/EP/ALBUM, title = Titel, detail = Artist, meta = Label).
+- **Sonntag – „Die Woche in 5 News“:** Karussell aus den 5 stärksten Posts der Woche (`posted.json`).
+Findet sich für ein Wochenformat nicht genug Belegtes (mind. 3 Items), stattdessen normales News-Bild.
 
-**Watchlist:** Fred again.., Four Tet, Skrillex, Jamie xx, Overmono, Kettama, Sammy Virji, Disclosure, Bicep, Peggy Gou, Keinemusik (&ME, Rampa, Adam Port), Black Coffee, Fisher, John Summit, Chris Lake, Dom Dolla, Anyma, Tale Of Us, Charlotte de Witte, Amelie Lens, Boris Brejcha, Paul Kalkbrenner, Fritz Kalkbrenner, Kölsch, Solomun, Âme, Ben Böhmer, Monolink, Martin Garrix, Swedish House Mafia, Calvin Harris, Eric Prydz, Chase & Status, Barry Can’t Swim, Ben UFO, Floating Points, Nia Archives, Hamdi. Große Neuigkeiten anderer Artists sind erlaubt.
+Kein guter Stoff → Slot weglassen. **Niemals Füllmaterial.** Lieber 1 starker Post als 2 schwache.
 
-## 3. Auswahl
-- **Ziel: 2 Posts pro Tag.** Nur 1 wirklich gute Story → 1 Post. Keine → **kein Post** (niemals Füllmaterial).
-- Priorität: 1) Deutschland/Österreich/Schweiz-Bezug (Tourdaten, Festivals, deutsche Artists) · 2) große Releases/Ankündigungen · 3) spannende Statements/Hintergründe.
-- **Freitag:** Post 1 ist der wichtigste Release der Woche (New Music Friday, Template `release`).
+## 2. Duplikate vermeiden
+`posted.json` lesen (auch Einträge mit `status: "draft"`) und `getScheduledPosts` für heute + morgen. Keine Story, deren Kern (Artist + Ereignis) in den letzten 30 Tagen schon vorkommt.
+
+## 3. Recherche (nur die letzten 48 Stunden)
+- WebSearch zur Watchlist und allgemein („electronic music news“, „dance music news today“, „Tour Deutschland Techno House 2027“, „Festival Line-up Deutschland“).
+- Gute Quellen: offizielle Label-Pressseiten, Resident Advisor, Mixmag, DJ Mag, EDM.com, Dancing Astronaut, Billboard Dance, Groove, FAZEmag, Songkick/Ticketmaster für Termine.
+- Jede Story per WebFetch im Originalartikel prüfen: Datum ≤ 48 h (Wochenformate: ≤ 7 Tage), Fakten stehen wirklich dort.
+- **Tabu:** Gerüchte, Leaks, Privatleben, Gesundheit, Rechtsstreit, unbestätigte Todesmeldungen, erfundene oder zugespitzte Zitate.
+- Priorität: 1) DACH-Bezug (Tourdaten, Festivals, deutsche Artists) · 2) große Releases/Ankündigungen · 3) spannende Statements. Stories mit hohem „Teil-Faktor“ (Überraschung, Ticket-Infos, „Das musst du wissen“) bekommen Slot A.
+
+**Watchlist:** Fred again.., Four Tet, Skrillex, Jamie xx, Overmono, Kettama, Sammy Virji, Josh Baker, Prospa, Disclosure, Bicep, Peggy Gou, Keinemusik (&ME, Rampa, Adam Port), Black Coffee, Fisher, John Summit, Chris Lake, Dom Dolla, Anyma, Tale Of Us, Charlotte de Witte, Amelie Lens, Boris Brejcha, Paul Kalkbrenner, Fritz Kalkbrenner, Kölsch, Solomun, Âme, Ben Böhmer, Monolink, Martin Garrix, Swedish House Mafia, Calvin Harris, David Guetta, Eric Prydz, Chase & Status, Barry Can’t Swim, Ben UFO, Floating Points, Nia Archives, Hamdi. Große News anderer Artists sind erlaubt.
 
 ## 4. Uhrzeiten
-- `getBestTimeToPostByNetwork` (instagram, heute 00:00–23:59, Europe/Berlin).
-- Post A: beste Stunde zwischen 07 und 13 Uhr. Post B: beste Stunde zwischen 16 und 21 Uhr. Mindestens 5 h Abstand.
-- Zeitpunkt muss ≥ 30 min in der Zukunft liegen und darf nicht mit einem bereits geplanten Post in derselben Stunde kollidieren – sonst die nächstbeste Stunde.
-- Die wichtigere Story bekommt den stärkeren Slot.
+- `getBestTimeToPostByNetwork` (instagram, heute, Europe/Berlin) → Slot A/B wie im Tagesplan.
+- ≥ 30 min in der Zukunft, keine Kollision mit bereits geplanten Posts in derselben Stunde, sonst nächstbeste Stunde.
 
 ## 5. Texte
-- **Headline** (aufs Bild): Deutsch, ≤ 70 Zeichen, aktiv, konkret, kein Clickbait, keine Emojis. Muster: „Four Tet kündigt neues Album an“.
+- **Headline** (Bild/Reel): Deutsch, ≤ 70 Zeichen, aktiv, konkret, kein Clickbait, keine Emojis.
 - **Subline**: ≤ 90 Zeichen, wichtigstes Zusatzdetail (Datum, Ort, Feature).
 - **Caption:**
-  1. 2–3 Sätze Fakten (Wer, Was, Wann, Wo).
-  2. Eine kurze Frage an die Community.
-  3. `Quelle: <Medium>` (bei Foto zusätzlich `Foto: <Credit>`).
-  4. 5–8 Hashtags: Artist (#fredagain), Genre (#techno #housemusic …), #elektronischemusik #musicnews #sidechain, bei DE-Bezug z. B. #technodeutschland.
+  1. Erster Satz = Suchbegriffe + Kern der News (Instagram-Suche liest Captions): z. B. „Fred again.. Tour 2027: …“.
+  2. 1–2 weitere Sätze Fakten.
+  3. Eine kurze Frage an die Community (Kommentare) oder „Schick das jemandem, der mit dir hingeht“ (Shares) – abwechseln.
+  4. Artists/Labels mit @Handle erwähnen – **nur** Handles, die auf der offiziellen Website oder Pressseite verlinkt sind; nie raten.
+  5. `Quelle: <Medium>` (bei Foto zusätzlich `Foto: <Credit>`).
+  6. **Maximal 5 Hashtags** (Instagram-Limit): Artist, Genre, #elektronischemusik, #musicnews, #sidechain – bei DE-Bezug ein Stadt-/DE-Tag statt #musicnews.
 - Zitate nur wörtlich aus der Quelle; sonst sinngemäß ohne Anführungszeichen.
 - Alt-Text: Beschreibung der Grafik inklusive Headline.
 
-## 6. Grafik rendern
-Spec als JSON schreiben und `node render.js spec.json` ausführen. Format 1080 × 1350.
-
-| template | wann | Felder |
+## 6. Rendern (`node render.js spec.json`)
+| Spec | Ergebnis | Felder |
 |---|---|---|
-| `news` | Standard | tag, artist, headline, subline, source, date, optional `dark: true` |
-| `news` + `photo` | nur wenn in `photos/` ein passendes Foto liegt | + photo (Pfad), focus (CSS background-position, z. B. "40% 20%"), source = Foto-Credit |
-| `release` | Single/Album/EP | title, artists, tag ("NEW RELEASE"/"NEW ALBUM"/"NEW EP"), status ("Out now"/"Ab <Datum>"), source, date |
-| `tour` | ≥ 2 bekannte Termine (DACH zuerst, max. 6) | headline, subline, dates [{date, city, venue}], source, date |
+| `template: "news"` | Bild 1080×1350 | tag, artist, headline, subline, source, date, `dark`?, `photo`?, `focus`? |
+| `template: "release"` | Bild | title, artists, tag, status, source, date, `photo`? |
+| `template: "tour"` | Bild | headline, subline, dates[{date, city, venue}] (max 6), source, date |
+| `template: "carousel"` | Bilder `<out>-1.jpg … -N.jpg` | cover{tag, headline, subline, dark?}, items[{kicker?, title, detail?, meta?}] (max 8), source, date – Outro-Slide kommt automatisch |
+| `format: "reel"` | MP4 1080×1920, 8 s | wie news (inkl. `photo`) |
+| `format: "story"` | Bild 1080×1920 | wie news |
 
-- Tags: NEWS, BREAKING, NEW RELEASE, NEW ALBUM, TOUR, FESTIVAL, INTERVIEW. `dark: true` nur für BREAKING/sehr große News.
-- Pressefotos können aus der Cloud-Umgebung nicht heruntergeladen werden → ohne Foto die Typo-Karte nutzen.
-- `date` = heutiges Datum TT.MM.JJJJ.
-- Fertiges JPEG mit dem Read-Tool ansehen: nichts abgeschnitten, keine Tippfehler, Umlaute korrekt. Sonst korrigieren und neu rendern.
+- Tags: NEWS, BREAKING, NEW RELEASE, NEW ALBUM, TOUR, FESTIVAL, INTERVIEW, NEW MUSIC FRIDAY, TOUR-RADAR, HINTERGRUND, WOCHENRÜCKBLICK. `dark: true` nur für BREAKING/sehr große News.
+- `photo` nur, wenn in `photos/` ein passendes Foto liegt (Dateiname = artist_credit.jpg); Credit in `source`.
+- `date` = heute, TT.MM.JJJJ.
+- Jedes Ergebnis ansehen (Read; beim Reel vorher mit `ffmpeg -ss 7.5 -i r.mp4 -frames:v 1 check.jpg` ein Standbild ziehen): nichts abgeschnitten, keine Tippfehler, Umlaute korrekt.
 
 ## 7. Hochladen & einplanen
-1. Bild nach `media/<JJJJ-MM-TT>-<slug>.jpg` kopieren, committen, `git push origin sidechain-media`.
-   Commit-Messages enden mit den Attributionszeilen aus dem System-Reminder der Session.
-2. URL: `https://raw.githubusercontent.com/nikpottbecker/ptbrmusic/sidechain-media/media/<datei>` – mit curl prüfen, bis HTTP 200.
-3. `createScheduledPost`: blogId `7154946`, `autoPublish: true`, `draft: false`, providers `[{"network":"instagram"}]`, `instagramData: {"type":"POST","collaborators":[],"showReelOnFeed":true,"isAiGenerated":false}`, media = [URL], mediaAltText, publicationDate mit Europe/Berlin.
-4. Nur wenn die Antwort `media` auf `static.metricool.com` zeigt: Datei mit `git rm` entfernen, committen, pushen. Zeigt sie noch auf GitHub, Datei liegen lassen und im Log vermerken.
-5. Bei einem Metricool-Fehler höchstens einmal mit korrigierten Daten erneut versuchen, sonst Story überspringen.
+1. Dateien nach `media/<JJJJ-MM-TT>-<slug>…` kopieren, committen, `git push origin sidechain-media`. Commit-Messages enden mit den Attributionszeilen aus dem System-Reminder der Session.
+2. URL je Datei: `https://raw.githubusercontent.com/nikpottbecker/ptbrmusic/sidechain-media/media/<datei>` – mit curl prüfen, bis HTTP 200.
+3. `createScheduledPost` (blogId `7154946`, `autoPublish: true`, `draft: false`, publicationDate Europe/Berlin, mediaAltText):
+   - **Reel:** media [mp4], `instagramData: {"type":"REEL","showReelOnFeed":true,"collaborators":[],"isAiGenerated":false}`, `videoCoverMilliseconds: 7500`.
+   - **Bild:** media [jpg], `instagramData.type: "POST"`.
+   - **Karussell:** media = alle Slides in Reihenfolge, `type: "POST"`.
+   - **Story:** media [story.jpg], `type: "STORY"`, **kein** `text`.
+   - Ist **threads** verbunden: Bild-/Karussell-Posts zusätzlich mit provider `threads` (`threadsData: {}`) – gleicher Text ohne Hashtags. Ist **tiktok** verbunden: Reels zusätzlich mit provider `tiktok` (`tiktokData: {"privacyOption":"PUBLIC_TO_EVERYONE"}`).
+4. Nur wenn die Antwort `media` auf `static.metricool.com` zeigt: Dateien mit `git rm` entfernen, committen, pushen.
+5. Fehler: höchstens einmal mit korrigierten Daten erneut. Meldet Metricool ein Plan-/Kontingent-Limit: zuerst Stories weglassen, dann Slot B – und in der Zusammenfassung melden.
 
 ## 8. Log & Abschluss
-- Pro Post in `posted.json` anhängen: `{"date","slot","artist","headline","source_url","template","metricool_id"}`; committen, pushen.
-- Zum Schluss eine kurze Zusammenfassung: welche Posts, um wie viel Uhr, welche Quellen – oder warum heute nichts gepostet wurde.
+- Pro Post in `posted.json` anhängen: `{"date","slot","format","artist","headline","source_url","metricool_id"}`; committen, pushen.
+- Zum Schluss kurze Zusammenfassung: Posts mit Uhrzeit, Format, Headline, Quelle – oder warum nichts gepostet wurde. Bei Fehlern genau sagen, was Nik tun muss.

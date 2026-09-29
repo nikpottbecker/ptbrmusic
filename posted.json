@@ -1,4 +1,5 @@
 [
-  {"date":"2026-09-30","slot":"10:00","artist":"Fred again..","headline":"Fred again.. spricht sich gegen KI-Musik aus","source_url":"https://edm.com/news/fred-again-condemns-generative-ai-music/","template":"news+photo","metricool_id":"384503460"},
-  {"date":"2026-09-30","slot":"18:00","artist":"Josh Baker, Kettama & Prospa","headline":"Josh Baker, Kettama & Prospa: London in einer Stunde ausverkauft","source_url":"https://djmag.com/news/josh-baker-kettama-and-prospa-add-second-london-date-2027","template":"news","metricool_id":"384511468"}
+  {"date":"2026-09-29","slot":"21:45","format":"news+photo","artist":"Fred again..","headline":"Fred again.. spricht sich gegen KI-Musik aus","source_url":"https://edm.com/news/fred-again-condemns-generative-ai-music/","metricool_id":"384514033","status":"published"},
+  {"date":"2026-09-30","slot":"18:00","format":"news","artist":"Josh Baker, Kettama & Prospa","headline":"Josh Baker, Kettama & Prospa: London in einer Stunde ausverkauft","source_url":"https://djmag.com/news/josh-baker-kettama-and-prospa-add-second-london-date-2027","metricool_id":"384511468","status":"scheduled"},
+  {"date":"2026-09-30","slot":"19:00","format":"news","artist":"David Guetta","headline":"David Guetta bringt The Monolith in die Londoner O2","source_url":"djmag.com","metricool_id":"384519904","status":"draft"}
 ]
