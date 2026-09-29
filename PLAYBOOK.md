@@ -8,6 +8,13 @@ Phase: **Aufbau bis Traktion** (Ziel 2.500 Follower). Reichweite bei Nicht-Follo
 ## Learnings (wird jeden Sonntag von der Wochenanalyse aktualisiert – hat Vorrang vor den Regeln unten)
 - Noch keine Daten. Erste Auswertung am Sonntag, 04.10.2026.
 
+## Daten & Bibliothek im Repo (nutzen!)
+- `data/handles.json` – verifizierte Instagram-Handles. Für @-Erwähnungen nur Einträge mit `verified: true`. Neue, belegte Handles ergänzen (mit Quelle).
+- `data/tours.json` – verifizierte DACH-Termine + Festival-Infos 2027. Grundlage für Tour-Radar und Ticket-Posts. Vergangene Termine ignorieren, neue Funde mit Quelle ergänzen.
+- `data/releases.json` – Releases (letzte Wochen + angekündigt). Grundlage für New Music Friday. Neue Funde ergänzen.
+- `library/profiles.json` + `node make-profile.js "<Artist>" media/<datei>.jpg <TT.MM.JJJJ>` – 12 fertige, belegte „Wer ist …?“-Karussells (erzeugt Slides + `.caption.txt`). Für den Mittwoch und als **Fallback**, wenn es keine gute News gibt. Ein Profil höchstens alle 60 Tage (in `posted.json` prüfen); bevorzugt Artists, die gerade in den News sind. Neue Profile nur mit belegten Fakten ergänzen.
+- `data/landscape.md` – Wettbewerbs- und Wachstumsrecherche (Hintergrund, nicht bei jedem Lauf lesen).
+
 ## 0. Setup (jeder Lauf startet in einer frischen Umgebung)
 1. `add_repo` owner `nikpottbecker`, repo `ptbrmusic`, access `push`.
 2. `git clone --depth 20 -b sidechain-media https://github.com/nikpottbecker/ptbrmusic /home/claude/sc && cd /home/claude/sc && npm i --silent`
@@ -17,18 +24,20 @@ Phase: **Aufbau bis Traktion** (Ziel 2.500 Follower). Reichweite bei Nicht-Follo
 ## 1. Tagesplan
 | Slot | Zeitfenster | Inhalt | Format |
 |---|---|---|---|
-| A | beste Stunde 07–13 Uhr | stärkste Story des Tages | **Reel** (`format: "reel"`) |
+| A | beste Stunde 07–13 Uhr | stärkste Story des Tages | **Reel** (`format: "reel"`) – Di/Do/Sa als **Trial Reel** (`instagramData.type: "TRIAL_REEL"`, wird zuerst Nicht-Followern gezeigt), sonst normales Reel |
 | B | beste Stunde 16–21 Uhr (≥ 5 h nach A) | zweite Story – oder an Wochenformat-Tagen das Karussell | News-Bild / Karussell |
 | Story | je 60 min nach A und B | dieselbe News als Story | `format: "story"` |
 
 **Wochenformate (Slot B):**
-- **Montag – „Tour-Radar“:** Karussell mit neuen Terminen in DACH aus den letzten 7 Tagen (Songkick, Ticketmaster/Eventim, Artist-Seiten). Ein Slide pro Artist: title = Artist, detail = Stadt + Venue, meta = Datum.
-- **Mittwoch – „Hintergrund“:** Karussell „Wer ist …?“ zu einem Artist, der gerade in den News ist: 4–6 Slides mit belegten Fakten (Herkunft, Durchbruch, wichtigste Releases, aktuelle Tour).
+- **Montag – „Tour-Radar“:** Karussell mit anstehenden DACH-Terminen (neue Ankündigungen der letzten 7 Tage zuerst, sonst die nächsten Highlights aus `data/tours.json`). Ein Slide pro Termin: kicker = Land (DE/AT/CH), title = Artist, detail = Stadt + Venue, meta = Datum + Ticketinfo. Österreich und die Schweiz bewusst mitnehmen – dort gibt es kaum Konkurrenz.
+- **Mittwoch – „Hintergrund“:** Karussell „Wer ist …?“ aus `library/profiles.json` (`make-profile.js`), bevorzugt ein Artist, der gerade in den News ist. Neue Profile nur mit belegten Fakten.
 - **Freitag – „New Music Friday“:** Karussell mit den 5–8 wichtigsten Releases der Woche (kicker = SINGLE/EP/ALBUM, title = Titel, detail = Artist, meta = Label).
 - **Sonntag – „Die Woche in 5 News“:** Karussell aus den 5 stärksten Posts der Woche (`posted.json`).
 Findet sich für ein Wochenformat nicht genug Belegtes (mind. 3 Items), stattdessen normales News-Bild.
 
-Kein guter Stoff → Slot weglassen. **Niemals Füllmaterial.** Lieber 1 starker Post als 2 schwache.
+**Ticket-Alarm:** Startet ein Vorverkauf für eine DACH-Show/ein DACH-Festival, ist das eine Top-Story (wird oft geteilt). Headline z. B. „Vorverkauf startet: …“, Caption mit „Schick das deiner Rave-Crew“.
+
+Kein guter Stoff → Slot B mit einem Evergreen-Karussell aus der Bibliothek füllen (Regeln oben) oder weglassen. **Niemals erfundene oder unbelegte Inhalte.**
 
 ## 2. Duplikate vermeiden
 `posted.json` lesen (auch Einträge mit `status: "draft"`) und `getScheduledPosts` für heute + morgen. Keine Story, deren Kern (Artist + Ereignis) in den letzten 30 Tagen schon vorkommt.
@@ -50,12 +59,12 @@ Kein guter Stoff → Slot weglassen. **Niemals Füllmaterial.** Lieber 1 starker
 - **Headline** (Bild/Reel): Deutsch, ≤ 70 Zeichen, aktiv, konkret, kein Clickbait, keine Emojis.
 - **Subline**: ≤ 90 Zeichen, wichtigstes Zusatzdetail (Datum, Ort, Feature).
 - **Caption:**
-  1. Erster Satz = Suchbegriffe + Kern der News (Instagram-Suche liest Captions): z. B. „Fred again.. Tour 2027: …“.
+  1. Erster Satz = Suchbegriffe + Kern der News (Instagram-Suche liest Captions), z. B. „Techno News: …“, „Fred again.. Tour 2027: …“, „Festival Line-up 2027: …“.
   2. 1–2 weitere Sätze Fakten.
   3. Eine kurze Frage an die Community (Kommentare) oder „Schick das jemandem, der mit dir hingeht“ (Shares) – abwechseln.
   4. Artists/Labels mit @Handle erwähnen – **nur** Handles, die auf der offiziellen Website oder Pressseite verlinkt sind; nie raten.
   5. `Quelle: <Medium>` (bei Foto zusätzlich `Foto: <Credit>`).
-  6. **Maximal 5 Hashtags** (Instagram-Limit): Artist, Genre, #elektronischemusik, #musicnews, #sidechain – bei DE-Bezug ein Stadt-/DE-Tag statt #musicnews.
+  6. **Maximal 5 Hashtags** (Instagram-Limit), Schema 1 Marke + 2 Genre + 1 Region + 1 Thema. Pool: #sidechainnews · #technonews · #technodeutschland · #housemusic · #techno · #melodictechno · #ukgarage · #rave · #clubkultur · #technoberlin · #festivalnews · #elektronischemusik · #technoaustria · #technoschweiz · #lineup – plus Artist-Tag statt eines Genre-Tags. **#edm vermeiden.**
 - Zitate nur wörtlich aus der Quelle; sonst sinngemäß ohne Anführungszeichen.
 - Alt-Text: Beschreibung der Grafik inklusive Headline.
 

@@ -1,0 +1,18 @@
+{
+  "_info": "Releases, Stand 2026-09-29 (unvollständig: nur edm.com und Apple Music waren abrufbar). Tageslauf ergänzt neue Funde.",
+  "recent": [
+    {"artist":"CA7RIEL & Paco Amoroso, PinkPantheress, Fred again.., Etienne de Crécy","title":"Sexy Magic (from GTAVI: The Album)","type":"single","release_date":"2026-09-17","label":"Atlantic / Take-Two","source_url":"https://music.apple.com/us/album/sexy-magic-from-gtavi-the-album-single/6812476953"},
+    {"artist":"Charlotte de Witte","title":"The Resistance","type":"EP","release_date":"2026-09-24","label":null,"featuring":"XSALT, Theo Nasa","source_url":"https://edm.com/music-releases/charlotte-de-witte-new-ep-the-resistance/"},
+    {"artist":"Boys Noize","title":"1+1+1","type":"single","release_date":"2026-09-24","label":"ONES and ZEROS","featuring":"ZEP","source_url":"https://edm.com/music-releases/boys-noize-announces-first-solo-album-five-years-7llvsion/"},
+    {"artist":"Bicep","title":"Air / Lemonder / Viper","type":"single","release_date":"2026-09-25","label":"Ninja Tune","featuring":"SOARR, Saskia and Clark","source_url":"https://edm.com/music-releases/bicep-air-lemonder-viper/"},
+    {"artist":"Kaskade","title":"ORIGIN //","type":"album","release_date":"2026-09-25","label":"Arkade","source_url":"https://edm.com/music-releases/kaskade-new-album-origin/"},
+    {"artist":"SOFI TUKKER & OneRepublic","title":"TSUNAMI","type":"single","release_date":"2026-09-25","label":"Republic Records","source_url":"https://edm.com/music-releases/sofi-tukker-onerepublic-tsunami/"},
+    {"artist":"Petit Biscuit","title":"your spark remains","type":"EP","release_date":"2026-09-25","label":null,"source_url":"https://edm.com/music-releases/petit-biscuit-your-spark-remains/"},
+    {"artist":"Knock2","title":"sound di alarm","type":"single","release_date":"2026-09-18","label":null,"source_url":"https://edm.com/music-releases/knock2-sound-di-alarm/"}
+  ],
+  "upcoming": [
+    {"artist":"Boys Noize","title":"7LLVSION","type":"album","release_date":"2026-11-06","label":"ONES and ZEROS","featuring":"Brutalismus 3000, TAICHU, Abra u. a.","announced_on":"2026-09-24","source_url":"https://edm.com/music-releases/boys-noize-announces-first-solo-album-five-years-7llvsion/"},
+    {"artist":"Various Artists (u. a. Fred again.., Bob Moses, Elderbrook, Travis Scott, Guy-Manuel de Homem-Christo)","title":"Grand Theft Auto VI: The Album","type":"album","release_date":"2026-11-19","label":"Atlantic Records / Rockstar Games","announced_on":"2026-09-18","source_url":"https://edm.com/news/gta-6-album-announced/"},
+    {"artist":"MPH","title":"Here, Forever","type":"album","release_date":"2026-11-20","label":"Disorder / Capitol Records","featuring":"Skrillex (Single „Mirage“)","announced_on":"2026-09-15","source_url":"https://edm.com/news/mph-announces-new-album-here-forever/"}
+  ]
+}
