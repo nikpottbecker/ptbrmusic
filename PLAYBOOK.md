@@ -40,6 +40,10 @@ Findet sich für ein Wochenformat nicht genug Belegtes (mind. 3 Items), stattdes
 
 Kein guter Stoff → Slot B mit einem Evergreen-Karussell aus der Bibliothek füllen (Regeln oben) oder weglassen. **Niemals erfundene oder unbelegte Inhalte.**
 
+**Vorab geplante Posts:** Liegt für heute im Fenster von Slot A oder B schon ein Feed-Post in Metricool (z. B. von Claude vorab eingeplant), diesen Slot **nicht** zusätzlich befüllen – nur die Story dazu planen, falls noch keine existiert.
+
+**Specials:** `library/specials/*.json` sind fertige Karussell-Specs (inkl. `caption` und `alt`). Mit `node render.js <spec>` rendern (vorher `date` setzen). Nur einplanen, wenn in `posted.json` noch nicht vorhanden.
+
 ## 2. Duplikate vermeiden
 `posted.json` lesen (auch Einträge mit `status: "draft"`) und `getScheduledPosts` für heute + morgen. Keine Story, deren Kern (Artist + Ereignis) in den letzten 30 Tagen schon vorkommt.
 

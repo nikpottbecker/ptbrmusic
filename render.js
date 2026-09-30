@@ -7,7 +7,7 @@
 //   template "tour"    – headline, subline, dates[{date,city,venue}], source, date
 // Carousel (1080×1350 JPEGs, out-1.jpg … out-N.jpg):
 //   template "carousel" – cover{tag, headline, subline, dark?}, items[{kicker?, title, detail?, meta?}], source, date
-//   Slides: cover + one slide per item (max 8) + outro. Metricool media = all files in order.
+//   Slides: cover + one slide per item (max 8) + outro. An item with rows[{date,name,detail}] (max 6) becomes a list slide. Metricool media = all files in order.
 // Vertical (1080×1920):
 //   format "reel"  → MP4, 8 s, 30 fps, animated (same fields as news, photo optional)
 //   format "story" → JPEG, static final frame of the reel layout
@@ -138,6 +138,23 @@ ${it.meta ? `<div style="background:#fff;border-radius:28px;padding:22px 28px;fo
 </div>`;
 }
 
+function slideList(s, it, i, n) {
+  const rows = (it.rows || []).slice(0, 6).map((d, k, a) => `
+<div style="display:flex;align-items:center;gap:28px;flex-grow:1;${k < a.length - 1 ? 'border-bottom:1px solid #e4e4e0' : ''}">
+<div style="width:240px;flex-shrink:0;background:#111;color:#fff;border-radius:999px;padding:14px 0;text-align:center;font-size:${a.length > 4 ? 24 : 27}px;font-weight:600">${esc(d.date)}</div>
+<div style="display:flex;flex-direction:column;gap:6px;min-width:0"><span style="font-size:${a.length > 4 ? 38 : 46}px;font-weight:700;letter-spacing:-.025em;line-height:1.05">${esc(d.name)}</span><span style="font-size:${a.length > 4 ? 25 : 28}px;color:#62625d">${esc(d.detail || '')}</span></div>
+</div>`).join('');
+  return `<div class="root" style="background:#f2f2ef;padding:56px;display:flex;flex-direction:column;gap:28px">
+<div class="top">${brand}<div class="pill" style="background:#fff">${i} / ${n}</div></div>
+<div style="display:flex;flex-direction:column;gap:12px;padding:0 8px">
+${it.kicker ? `<div class="tag">${esc(it.kicker)}</div>` : ''}
+<h1 style="font-size:72px;line-height:.98;letter-spacing:-.045em;font-weight:800">${esc(it.title)}</h1>
+</div>
+<div style="background:#fff;border-radius:40px;padding:12px 36px;display:flex;flex-direction:column;flex-grow:1">${rows}</div>
+<div class="foot" style="border-color:#dcdcd7"><span>${esc(s.source)}</span><span>Weiter wischen →</span></div>
+</div>`;
+}
+
 function slideOutro() {
   return `<div class="root" style="background:#0f0f0f;color:#fff;padding:64px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:48px;text-align:center">
 <div style="width:300px;height:300px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center">${WAVE('#111', 190, 100, 16)}</div>
@@ -215,7 +232,7 @@ async function shoot(page, html, out, w, h) {
     const base = out.replace(/\.jpg$/i, '');
     const items = (spec.items || []).slice(0, 8);
     const slides = [newsType({ ...spec.cover, artist: spec.cover.artist || '', source: spec.source, date: spec.date })]
-      .concat(items.map((it, i) => slideItem(spec, it, i + 1, items.length)), [slideOutro()]);
+      .concat(items.map((it, i) => it.rows ? slideList(spec, it, i + 1, items.length) : slideItem(spec, it, i + 1, items.length)), [slideOutro()]);
     for (let i = 0; i < slides.length; i++) {
       const f = `${base}-${i + 1}.jpg`;
       fs.unlinkSync(await shoot(page, slides[i], f, 1080, 1350)); done.push(f);

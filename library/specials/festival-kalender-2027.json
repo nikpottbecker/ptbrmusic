@@ -1,0 +1,25 @@
+{"template":"carousel",
+ "cover":{"tag":"FESTIVALS 2027","headline":"Der Festival-Kalender 2027","subline":"Deutschland, Österreich, Schweiz: alle bestätigten Termine auf einen Blick"},
+ "items":[
+  {"kicker":"FRÜHLING","title":"April & Mai","rows":[
+    {"date":"3.–4. April","name":"Time Warp","detail":"Maimarkthalle, Mannheim"},
+    {"date":"5.–10. April","name":"Snowbombing","detail":"Mayrhofen (AT) · u. a. Bicep live"},
+    {"date":"30. Apr.–1. Mai","name":"Mayday","detail":"Westfalenhallen, Dortmund"}]},
+  {"kicker":"FRÜHSOMMER","title":"Juni","rows":[
+    {"date":"4.–6. Juni","name":"World Club Dome","detail":"Deutsche Bank Park, Frankfurt"},
+    {"date":"4.–6. Juni","name":"Rock im Park","detail":"Nürnberg · u. a. The Prodigy"},
+    {"date":"25.–27. Juni","name":"Ikarus Festival","detail":"Allgäu Airport, Memmingen"}]},
+  {"kicker":"HOCHSOMMER","title":"Juli","rows":[
+    {"date":"7.–11. Juli","name":"Airbeat One","detail":"Neustadt-Glewe · Motto Australien"},
+    {"date":"8.–10. Juli","name":"Electric Love","detail":"Salzburgring (AT)"},
+    {"date":"16.–18. Juli","name":"Parookaville","detail":"Airport Weeze"},
+    {"date":"16.–18. Juli","name":"Sea You","detail":"Tunisee, Freiburg"},
+    {"date":"17.–18. Juli","name":"Lollapalooza Berlin","detail":"Olympiastadion & -park"}]},
+  {"kicker":"SPÄTSOMMER","title":"Juli & August","rows":[
+    {"date":"29. Juli–1. Aug.","name":"Nature One","detail":"Raketenbasis Pydna, Kastellaun"},
+    {"date":"14. August","name":"Street Parade","detail":"Zürich (CH) · Eintritt frei"},
+    {"date":"19.–21. August","name":"FM4 Frequency","detail":"St. Pölten (AT)"}]}
+ ],
+ "source":"Quellen: offizielle Festival-Seiten, FAZEmag, DJ Mag","date":"","out":"festival-kalender-2027.jpg",
+ "caption":"Festival Line-up 2027: Das sind alle bereits bestätigten Termine der großen Elektro-Festivals in Deutschland, Österreich und der Schweiz – von Time Warp im April bis zur Street Parade in Zürich. Bei vielen läuft der Vorverkauf schon, etwa bei Parookaville, Nature One, Airbeat One und World Club Dome. Speichern, damit du keinen Vorverkauf verpasst.\n\nWelches Festival ist 2027 fest eingeplant? Schick das deiner Festival-Crew.\n\nQuellen: offizielle Festival-Websites, FAZEmag, DJ Mag (Stand 30.09.2026)\n\n#sidechainnews #festivalnews #techno #technodeutschland #lineup",
+ "alt":"Karussell von sidechain: Festival-Kalender 2027 für Deutschland, Österreich und die Schweiz mit Terminen von Time Warp, Snowbombing, Mayday, World Club Dome, Rock im Park, Ikarus, Airbeat One, Electric Love, Parookaville, Sea You, Lollapalooza Berlin, Nature One, Street Parade und FM4 Frequency."}
