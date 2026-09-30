@@ -1,9 +1,83 @@
 [
-  {"date":"2026-09-29","slot":"21:45","format":"news+photo","artist":"Fred again..","headline":"Fred again.. spricht sich gegen KI-Musik aus","source_url":"https://edm.com/news/fred-again-condemns-generative-ai-music/","metricool_id":"384514033","status":"published"},
-  {"date":"2026-09-30","slot":"18:00","format":"news","artist":"Josh Baker, Kettama & Prospa","headline":"Josh Baker, Kettama & Prospa: London in einer Stunde ausverkauft","source_url":"https://djmag.com/news/josh-baker-kettama-and-prospa-add-second-london-date-2027","metricool_id":"384511468","status":"scheduled"},
-  {"date":"2026-09-30","slot":"19:00","format":"news","artist":"David Guetta","headline":"David Guetta bringt The Monolith in die Londoner O2","source_url":"djmag.com","metricool_id":"384519904","status":"draft"},
-  {"date":"2026-09-30","slot":"10:00","format":"reel","artist":"Martin Garrix","headline":"Martin Garrix singt wieder selbst: neue Single am Freitag","source_url":"https://djmag.com/news/martin-garrix-teases-new-single-featuring-his-own-vocals-dream-of-you-listen","metricool_id":"384736713","status":"scheduled"},
-  {"date":"2026-09-30","slot":"11:00","format":"story","artist":"Martin Garrix","headline":"Martin Garrix singt wieder selbst: neue Single am Freitag","source_url":"https://djmag.com/news/martin-garrix-teases-new-single-featuring-his-own-vocals-dream-of-you-listen","metricool_id":"384736744","status":"scheduled"},
-  {"date":"2026-09-30","slot":"16:00","format":"carousel-profile","artist":"Charlotte de Witte","headline":"Wer ist eigentlich Charlotte de Witte?","source_url":"https://en.wikipedia.org/wiki/Charlotte_de_Witte; https://djmag.com/news/charlotte-de-witte-teases-two-flanders-expo-shows-early-2027","metricool_id":"384736817","status":"scheduled"},
-  {"date":"2026-09-30","slot":"17:00","format":"story","artist":"Charlotte de Witte","headline":"Wer ist eigentlich Charlotte de Witte?","source_url":"https://en.wikipedia.org/wiki/Charlotte_de_Witte","metricool_id":"384736841","status":"scheduled"}
+ {
+  "date": "2026-09-29",
+  "slot": "21:45",
+  "format": "news+photo",
+  "artist": "Fred again..",
+  "headline": "Fred again.. spricht sich gegen KI-Musik aus",
+  "source_url": "https://edm.com/news/fred-again-condemns-generative-ai-music/",
+  "metricool_id": "384514033",
+  "status": "published"
+ },
+ {
+  "date": "2026-09-30",
+  "slot": "18:00",
+  "format": "news",
+  "artist": "Josh Baker, Kettama & Prospa",
+  "headline": "Josh Baker, Kettama & Prospa: London in einer Stunde ausverkauft",
+  "source_url": "https://djmag.com/news/josh-baker-kettama-and-prospa-add-second-london-date-2027",
+  "metricool_id": "384511468",
+  "status": "scheduled"
+ },
+ {
+  "date": "2026-09-30",
+  "slot": "19:00",
+  "format": "news",
+  "artist": "David Guetta",
+  "headline": "David Guetta bringt The Monolith in die Londoner O2",
+  "source_url": "djmag.com",
+  "metricool_id": "384519904",
+  "status": "draft"
+ },
+ {
+  "date": "2026-09-30",
+  "slot": "10:00",
+  "format": "reel",
+  "artist": "Martin Garrix",
+  "headline": "Martin Garrix singt wieder selbst: neue Single am Freitag",
+  "source_url": "https://djmag.com/news/martin-garrix-teases-new-single-featuring-his-own-vocals-dream-of-you-listen",
+  "metricool_id": "384736713",
+  "status": "scheduled"
+ },
+ {
+  "date": "2026-09-30",
+  "slot": "11:00",
+  "format": "story",
+  "artist": "Martin Garrix",
+  "headline": "Martin Garrix singt wieder selbst: neue Single am Freitag",
+  "source_url": "https://djmag.com/news/martin-garrix-teases-new-single-featuring-his-own-vocals-dream-of-you-listen",
+  "metricool_id": "384736744",
+  "status": "scheduled"
+ },
+ {
+  "date": "2026-09-30",
+  "slot": "16:00",
+  "format": "carousel-profile",
+  "artist": "Charlotte de Witte",
+  "headline": "Wer ist eigentlich Charlotte de Witte?",
+  "source_url": "https://en.wikipedia.org/wiki/Charlotte_de_Witte; https://djmag.com/news/charlotte-de-witte-teases-two-flanders-expo-shows-early-2027",
+  "metricool_id": "384736817",
+  "status": "scheduled"
+ },
+ {
+  "date": "2026-09-30",
+  "slot": "17:00",
+  "format": "story",
+  "artist": "Charlotte de Witte",
+  "headline": "Wer ist eigentlich Charlotte de Witte?",
+  "source_url": "https://en.wikipedia.org/wiki/Charlotte_de_Witte",
+  "metricool_id": "384736841",
+  "status": "scheduled"
+ },
+ {
+  "date": "2026-10-03",
+  "slot": "18:00",
+  "format": "carousel-special",
+  "artist": "Festivals DACH",
+  "headline": "Der Festival-Kalender 2027",
+  "source_url": "library/specials/festival-kalender-2027.json",
+  "metricool_id": "385021215",
+  "status": "scheduled",
+  "by": "claude-vorab"
+ }
 ]
