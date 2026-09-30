@@ -12,7 +12,8 @@ Phase: **Aufbau bis Traktion** (Ziel 2.500 Follower). Reichweite bei Nicht-Follo
 - `data/handles.json` – verifizierte Instagram-Handles. Für @-Erwähnungen nur Einträge mit `verified: true`. Neue, belegte Handles ergänzen (mit Quelle).
 - `data/tours.json` – verifizierte DACH-Termine + Festival-Infos 2027. Grundlage für Tour-Radar und Ticket-Posts. Vergangene Termine ignorieren, neue Funde mit Quelle ergänzen.
 - `data/releases.json` – Releases (letzte Wochen + angekündigt). Grundlage für New Music Friday. Neue Funde ergänzen.
-- `library/profiles.json` + `node make-profile.js "<Artist>" media/<datei>.jpg <TT.MM.JJJJ>` – 12 fertige, belegte „Wer ist …?“-Karussells (erzeugt Slides + `.caption.txt`). Für den Mittwoch und als **Fallback**, wenn es keine gute News gibt. Ein Profil höchstens alle 60 Tage (in `posted.json` prüfen); bevorzugt Artists, die gerade in den News sind. Neue Profile nur mit belegten Fakten ergänzen.
+- `library/explainers.json` – 5 belegte Erklär-Karussells (UK Garage, Melodic Techno, Techno vs. House, Love Parade, Berlin als Techno-Hauptstadt), Tag ERKLÄRT. Gleicher Befehl mit dem `topic` statt Artist. Gut für Samstag/Sonntag-Abende ohne News und zum Speichern/Teilen.
+- `library/profiles.json` + `node make-profile.js "<Artist>" media/<datei>.jpg <TT.MM.JJJJ>` – 29 fertige, belegte „Wer ist …?“-Karussells (erzeugt Slides + `.caption.txt`). Für den Mittwoch und als **Fallback**, wenn es keine gute News gibt. Ein Profil höchstens alle 60 Tage (in `posted.json` prüfen); bevorzugt Artists, die gerade in den News sind. Neue Profile nur mit belegten Fakten ergänzen.
 - `data/landscape.md` – Wettbewerbs- und Wachstumsrecherche (Hintergrund, nicht bei jedem Lauf lesen).
 
 ## 0. Setup (jeder Lauf startet in einer frischen Umgebung)
