@@ -76,8 +76,11 @@
   "artist": "Festivals DACH",
   "headline": "Der Festival-Kalender 2027",
   "source_url": "library/specials/festival-kalender-2027.json",
-  "metricool_id": "385021215",
+  "metricool_id": "385021595",
   "status": "scheduled",
-  "by": "claude-vorab"
+  "by": "claude-vorab",
+  "collaborators": [
+   "thefestivalwire"
+  ]
  }
 ]

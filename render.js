@@ -220,11 +220,18 @@ async function shoot(page, html, out, w, h) {
       await page.evaluate(ms => document.getAnimations().forEach(a => { a.currentTime = ms; }), (f / fps) * 1000);
       await page.screenshot({ path: path.join(fdir, `f${String(f).padStart(4, '0')}.jpg`), type: 'jpeg', quality: 92 });
     }
+    // original generated audio (audio.py) unless spec.audio === false
+    const wav = path.join(dir, '.reel.wav');
+    let audioIn = ['-f', 'lavfi', '-i', 'anullsrc=channel_layout=stereo:sample_rate=44100'];
+    if (spec.audio !== false && fs.existsSync(path.join(dir, 'audio.py'))) {
+      const seed = [...String(spec.headline || '')].reduce((a, c) => (a * 31 + c.charCodeAt(0)) % 100000, 7);
+      try { execFileSync('python3', [path.join(dir, 'audio.py'), wav, String(seed)]); audioIn = ['-i', wav]; } catch (e) { console.error('audio.py failed, silent reel'); }
+    }
     execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-framerate', String(fps), '-i', path.join(fdir, 'f%04d.jpg'),
-      '-f', 'lavfi', '-i', 'anullsrc=channel_layout=stereo:sample_rate=44100', '-shortest',
+      ...audioIn, '-shortest',
       '-c:v', 'libx264', '-profile:v', 'high', '-pix_fmt', 'yuv420p', '-crf', '20', '-r', String(fps),
       '-c:a', 'aac', '-b:a', '128k', '-movflags', '+faststart', out]);
-    fs.rmSync(fdir, { recursive: true, force: true }); fs.unlinkSync(tmp);
+    fs.rmSync(fdir, { recursive: true, force: true }); fs.unlinkSync(tmp); fs.rmSync(wav, { force: true });
     done.push(out);
   } else if (spec.format === 'story') {
     fs.unlinkSync(await shoot(page, vertical(spec, false), out, 1080, 1920)); done.push(out);

@@ -67,9 +67,10 @@ Kein guter Stoff → Slot B mit einem Evergreen-Karussell aus der Bibliothek fü
   1. Erster Satz = Suchbegriffe + Kern der News (Instagram-Suche liest Captions), z. B. „Techno News: …“, „Fred again.. Tour 2027: …“, „Festival Line-up 2027: …“.
   2. 1–2 weitere Sätze Fakten.
   3. Eine kurze Frage an die Community (Kommentare) oder „Schick das jemandem, der mit dir hingeht“ (Shares) – abwechseln.
-  4. Artists/Labels mit @Handle erwähnen – **nur** Handles, die auf der offiziellen Website oder Pressseite verlinkt sind; nie raten.
-  5. `Quelle: <Medium>` (bei Foto zusätzlich `Foto: <Credit>`).
-  6. **Maximal 5 Hashtags** (Instagram-Limit), Schema 1 Marke + 2 Genre + 1 Region + 1 Thema. Pool: #sidechainnews · #technonews · #technodeutschland · #housemusic · #techno · #melodictechno · #ukgarage · #rave · #clubkultur · #technoberlin · #festivalnews · #elektronischemusik · #technoaustria · #technoschweiz · #lineup – plus Artist-Tag statt eines Genre-Tags. **#edm vermeiden.**
+  4. **Collab mit @thefestivalwire:** Bei Festival-, Line-up- und DACH-Event-Posts `instagramData.collaborators: [{"username":"thefestivalwire","deleted":false}]` setzen (Niks eigener Festival-Account, er bestätigt die Einladung). Höchstens 3× pro Woche.
+  5. Artists/Labels mit @Handle erwähnen – **nur** Handles, die auf der offiziellen Website oder Pressseite verlinkt sind; nie raten.
+  6. `Quelle: <Medium>` (bei Foto zusätzlich `Foto: <Credit>`).
+  7. **Maximal 5 Hashtags** (Instagram-Limit), Schema 1 Marke + 2 Genre + 1 Region + 1 Thema. Pool: #sidechainnews · #technonews · #technodeutschland · #housemusic · #techno · #melodictechno · #ukgarage · #rave · #clubkultur · #technoberlin · #festivalnews · #elektronischemusik · #technoaustria · #technoschweiz · #lineup – plus Artist-Tag statt eines Genre-Tags. **#edm vermeiden.**
 - Zitate nur wörtlich aus der Quelle; sonst sinngemäß ohne Anführungszeichen.
 - Alt-Text: Beschreibung der Grafik inklusive Headline.
 
