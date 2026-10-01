@@ -125,5 +125,55 @@
   "source_url": "https://mixmag.net/read/fatboy-slim-never-been-paid-play-glastonbury-festival-news",
   "metricool_id": "385542897",
   "status": "scheduled"
+ },
+ {
+  "date": "2026-10-01",
+  "slot": "13:00",
+  "format": "news",
+  "artist": "Knaack",
+  "headline": "Berliner Knaack-Klub: Bezirk lehnt Bauvorbescheid ab",
+  "source_url": "https://groove.de/2026/09/30/knaack-klub-in-prenzlauer-berg-eroeffnung-verschiebt-sich/",
+  "metricool_id": "385543857",
+  "status": "scheduled"
+ },
+ {
+  "date": "2026-10-01",
+  "slot": "14:00",
+  "format": "story",
+  "artist": "Knaack",
+  "headline": "Berliner Knaack-Klub: Bezirk lehnt Bauvorbescheid ab",
+  "source_url": "https://groove.de/2026/09/30/knaack-klub-in-prenzlauer-berg-eroeffnung-verschiebt-sich/",
+  "metricool_id": "385543885",
+  "status": "scheduled"
+ },
+ {
+  "date": "2026-10-01",
+  "slot": "15:00",
+  "format": "news",
+  "artist": "Ticketing UK",
+  "headline": "UK will Ticket-Wiederverkauf über Nennwert schneller verbieten",
+  "source_url": "https://mixmag.net/read/uk-culture-minister-promises-quick-introduction-of-proposed-ticket-touting-ban-news",
+  "metricool_id": "385543907",
+  "status": "scheduled"
+ },
+ {
+  "date": "2026-10-01",
+  "slot": "16:00",
+  "format": "story",
+  "artist": "Ticketing UK",
+  "headline": "UK will Ticket-Wiederverkauf über Nennwert schneller verbieten",
+  "source_url": "https://mixmag.net/read/uk-culture-minister-promises-quick-introduction-of-proposed-ticket-touting-ban-news",
+  "metricool_id": "385543925",
+  "status": "scheduled"
+ },
+ {
+  "date": "2026-10-01",
+  "slot": "20:00",
+  "format": "carousel-explainer",
+  "artist": "Berlin als Techno-Hauptstadt",
+  "headline": "Warum Berlin Techno-Hauptstadt ist",
+  "source_url": "library/explainers.json",
+  "metricool_id": "385543944",
+  "status": "scheduled"
  }
 ]
