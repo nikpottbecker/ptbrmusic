@@ -82,5 +82,48 @@
   "collaborators": [
    "thefestivalwire"
   ]
+ },
+ {
+  "date": "2026-10-01",
+  "slot": "10:00",
+  "format": "trial-reel",
+  "artist": "KitKatClub",
+  "headline": "„One Night at KitKat“: ARD-Doku jetzt in der Mediathek",
+  "source_url": "https://groove.de/2026/09/30/one-night-at-kitkat-ard-doku-jetzt-in-der-mediathek-zu-sehen/",
+  "metricool_id": "385542823",
+  "status": "scheduled"
+ },
+ {
+  "date": "2026-10-01",
+  "slot": "11:00",
+  "format": "story",
+  "artist": "KitKatClub",
+  "headline": "„One Night at KitKat“: ARD-Doku jetzt in der Mediathek",
+  "source_url": "https://groove.de/2026/09/30/one-night-at-kitkat-ard-doku-jetzt-in-der-mediathek-zu-sehen/",
+  "metricool_id": "385542851",
+  "status": "scheduled"
+ },
+ {
+  "date": "2026-10-01",
+  "slot": "18:00",
+  "format": "news",
+  "artist": "Fatboy Slim",
+  "headline": "Fatboy Slim: über 100 Glastonbury-Sets – bezahlt wurde er nie",
+  "source_url": "https://mixmag.net/read/fatboy-slim-never-been-paid-play-glastonbury-festival-news",
+  "metricool_id": "385542878",
+  "status": "scheduled",
+  "collaborators": [
+   "thefestivalwire"
+  ]
+ },
+ {
+  "date": "2026-10-01",
+  "slot": "19:00",
+  "format": "story",
+  "artist": "Fatboy Slim",
+  "headline": "Fatboy Slim: über 100 Glastonbury-Sets – bezahlt wurde er nie",
+  "source_url": "https://mixmag.net/read/fatboy-slim-never-been-paid-play-glastonbury-festival-news",
+  "metricool_id": "385542897",
+  "status": "scheduled"
  }
 ]
