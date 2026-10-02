@@ -1,179 +1,209 @@
 [
- {
-  "date": "2026-09-29",
-  "slot": "21:45",
-  "format": "news+photo",
-  "artist": "Fred again..",
-  "headline": "Fred again.. spricht sich gegen KI-Musik aus",
-  "source_url": "https://edm.com/news/fred-again-condemns-generative-ai-music/",
-  "metricool_id": "384514033",
-  "status": "published"
- },
- {
-  "date": "2026-09-30",
-  "slot": "18:00",
-  "format": "news",
-  "artist": "Josh Baker, Kettama & Prospa",
-  "headline": "Josh Baker, Kettama & Prospa: London in einer Stunde ausverkauft",
-  "source_url": "https://djmag.com/news/josh-baker-kettama-and-prospa-add-second-london-date-2027",
-  "metricool_id": "384511468",
-  "status": "scheduled"
- },
- {
-  "date": "2026-09-30",
-  "slot": "19:00",
-  "format": "news",
-  "artist": "David Guetta",
-  "headline": "David Guetta bringt The Monolith in die Londoner O2",
-  "source_url": "djmag.com",
-  "metricool_id": "384519904",
-  "status": "draft"
- },
- {
-  "date": "2026-09-30",
-  "slot": "10:00",
-  "format": "reel",
-  "artist": "Martin Garrix",
-  "headline": "Martin Garrix singt wieder selbst: neue Single am Freitag",
-  "source_url": "https://djmag.com/news/martin-garrix-teases-new-single-featuring-his-own-vocals-dream-of-you-listen",
-  "metricool_id": "384736713",
-  "status": "scheduled"
- },
- {
-  "date": "2026-09-30",
-  "slot": "11:00",
-  "format": "story",
-  "artist": "Martin Garrix",
-  "headline": "Martin Garrix singt wieder selbst: neue Single am Freitag",
-  "source_url": "https://djmag.com/news/martin-garrix-teases-new-single-featuring-his-own-vocals-dream-of-you-listen",
-  "metricool_id": "384736744",
-  "status": "scheduled"
- },
- {
-  "date": "2026-09-30",
-  "slot": "16:00",
-  "format": "carousel-profile",
-  "artist": "Charlotte de Witte",
-  "headline": "Wer ist eigentlich Charlotte de Witte?",
-  "source_url": "https://en.wikipedia.org/wiki/Charlotte_de_Witte; https://djmag.com/news/charlotte-de-witte-teases-two-flanders-expo-shows-early-2027",
-  "metricool_id": "384736817",
-  "status": "scheduled"
- },
- {
-  "date": "2026-09-30",
-  "slot": "17:00",
-  "format": "story",
-  "artist": "Charlotte de Witte",
-  "headline": "Wer ist eigentlich Charlotte de Witte?",
-  "source_url": "https://en.wikipedia.org/wiki/Charlotte_de_Witte",
-  "metricool_id": "384736841",
-  "status": "scheduled"
- },
- {
-  "date": "2026-10-03",
-  "slot": "18:00",
-  "format": "carousel-special",
-  "artist": "Festivals DACH",
-  "headline": "Der Festival-Kalender 2027",
-  "source_url": "library/specials/festival-kalender-2027.json",
-  "metricool_id": "385021595",
-  "status": "scheduled",
-  "by": "claude-vorab",
-  "collaborators": [
-   "thefestivalwire"
-  ]
- },
- {
-  "date": "2026-10-01",
-  "slot": "10:00",
-  "format": "trial-reel",
-  "artist": "KitKatClub",
-  "headline": "„One Night at KitKat“: ARD-Doku jetzt in der Mediathek",
-  "source_url": "https://groove.de/2026/09/30/one-night-at-kitkat-ard-doku-jetzt-in-der-mediathek-zu-sehen/",
-  "metricool_id": "385542823",
-  "status": "scheduled"
- },
- {
-  "date": "2026-10-01",
-  "slot": "11:00",
-  "format": "story",
-  "artist": "KitKatClub",
-  "headline": "„One Night at KitKat“: ARD-Doku jetzt in der Mediathek",
-  "source_url": "https://groove.de/2026/09/30/one-night-at-kitkat-ard-doku-jetzt-in-der-mediathek-zu-sehen/",
-  "metricool_id": "385542851",
-  "status": "scheduled"
- },
- {
-  "date": "2026-10-01",
-  "slot": "18:00",
-  "format": "news",
-  "artist": "Fatboy Slim",
-  "headline": "Fatboy Slim: über 100 Glastonbury-Sets – bezahlt wurde er nie",
-  "source_url": "https://mixmag.net/read/fatboy-slim-never-been-paid-play-glastonbury-festival-news",
-  "metricool_id": "385542878",
-  "status": "scheduled",
-  "collaborators": [
-   "thefestivalwire"
-  ]
- },
- {
-  "date": "2026-10-01",
-  "slot": "19:00",
-  "format": "story",
-  "artist": "Fatboy Slim",
-  "headline": "Fatboy Slim: über 100 Glastonbury-Sets – bezahlt wurde er nie",
-  "source_url": "https://mixmag.net/read/fatboy-slim-never-been-paid-play-glastonbury-festival-news",
-  "metricool_id": "385542897",
-  "status": "scheduled"
- },
- {
-  "date": "2026-10-01",
-  "slot": "13:00",
-  "format": "news",
-  "artist": "Knaack",
-  "headline": "Berliner Knaack-Klub: Bezirk lehnt Bauvorbescheid ab",
-  "source_url": "https://groove.de/2026/09/30/knaack-klub-in-prenzlauer-berg-eroeffnung-verschiebt-sich/",
-  "metricool_id": "385543857",
-  "status": "scheduled"
- },
- {
-  "date": "2026-10-01",
-  "slot": "14:00",
-  "format": "story",
-  "artist": "Knaack",
-  "headline": "Berliner Knaack-Klub: Bezirk lehnt Bauvorbescheid ab",
-  "source_url": "https://groove.de/2026/09/30/knaack-klub-in-prenzlauer-berg-eroeffnung-verschiebt-sich/",
-  "metricool_id": "385543885",
-  "status": "scheduled"
- },
- {
-  "date": "2026-10-01",
-  "slot": "15:00",
-  "format": "news",
-  "artist": "Ticketing UK",
-  "headline": "UK will Ticket-Wiederverkauf über Nennwert schneller verbieten",
-  "source_url": "https://mixmag.net/read/uk-culture-minister-promises-quick-introduction-of-proposed-ticket-touting-ban-news",
-  "metricool_id": "385543907",
-  "status": "scheduled"
- },
- {
-  "date": "2026-10-01",
-  "slot": "16:00",
-  "format": "story",
-  "artist": "Ticketing UK",
-  "headline": "UK will Ticket-Wiederverkauf über Nennwert schneller verbieten",
-  "source_url": "https://mixmag.net/read/uk-culture-minister-promises-quick-introduction-of-proposed-ticket-touting-ban-news",
-  "metricool_id": "385543925",
-  "status": "scheduled"
- },
- {
-  "date": "2026-10-01",
-  "slot": "20:00",
-  "format": "carousel-explainer",
-  "artist": "Berlin als Techno-Hauptstadt",
-  "headline": "Warum Berlin Techno-Hauptstadt ist",
-  "source_url": "library/explainers.json",
-  "metricool_id": "385543944",
-  "status": "scheduled"
- }
+  {
+    "date": "2026-09-29",
+    "slot": "21:45",
+    "format": "news+photo",
+    "artist": "Fred again..",
+    "headline": "Fred again.. spricht sich gegen KI-Musik aus",
+    "source_url": "https://edm.com/news/fred-again-condemns-generative-ai-music/",
+    "metricool_id": "384514033",
+    "status": "published"
+  },
+  {
+    "date": "2026-09-30",
+    "slot": "18:00",
+    "format": "news",
+    "artist": "Josh Baker, Kettama & Prospa",
+    "headline": "Josh Baker, Kettama & Prospa: London in einer Stunde ausverkauft",
+    "source_url": "https://djmag.com/news/josh-baker-kettama-and-prospa-add-second-london-date-2027",
+    "metricool_id": "384511468",
+    "status": "scheduled"
+  },
+  {
+    "date": "2026-09-30",
+    "slot": "19:00",
+    "format": "news",
+    "artist": "David Guetta",
+    "headline": "David Guetta bringt The Monolith in die Londoner O2",
+    "source_url": "djmag.com",
+    "metricool_id": "384519904",
+    "status": "draft"
+  },
+  {
+    "date": "2026-09-30",
+    "slot": "10:00",
+    "format": "reel",
+    "artist": "Martin Garrix",
+    "headline": "Martin Garrix singt wieder selbst: neue Single am Freitag",
+    "source_url": "https://djmag.com/news/martin-garrix-teases-new-single-featuring-his-own-vocals-dream-of-you-listen",
+    "metricool_id": "384736713",
+    "status": "scheduled"
+  },
+  {
+    "date": "2026-09-30",
+    "slot": "11:00",
+    "format": "story",
+    "artist": "Martin Garrix",
+    "headline": "Martin Garrix singt wieder selbst: neue Single am Freitag",
+    "source_url": "https://djmag.com/news/martin-garrix-teases-new-single-featuring-his-own-vocals-dream-of-you-listen",
+    "metricool_id": "384736744",
+    "status": "scheduled"
+  },
+  {
+    "date": "2026-09-30",
+    "slot": "16:00",
+    "format": "carousel-profile",
+    "artist": "Charlotte de Witte",
+    "headline": "Wer ist eigentlich Charlotte de Witte?",
+    "source_url": "https://en.wikipedia.org/wiki/Charlotte_de_Witte; https://djmag.com/news/charlotte-de-witte-teases-two-flanders-expo-shows-early-2027",
+    "metricool_id": "384736817",
+    "status": "scheduled"
+  },
+  {
+    "date": "2026-09-30",
+    "slot": "17:00",
+    "format": "story",
+    "artist": "Charlotte de Witte",
+    "headline": "Wer ist eigentlich Charlotte de Witte?",
+    "source_url": "https://en.wikipedia.org/wiki/Charlotte_de_Witte",
+    "metricool_id": "384736841",
+    "status": "scheduled"
+  },
+  {
+    "date": "2026-10-03",
+    "slot": "18:00",
+    "format": "carousel-special",
+    "artist": "Festivals DACH",
+    "headline": "Der Festival-Kalender 2027",
+    "source_url": "library/specials/festival-kalender-2027.json",
+    "metricool_id": "385021595",
+    "status": "scheduled",
+    "by": "claude-vorab",
+    "collaborators": [
+      "thefestivalwire"
+    ]
+  },
+  {
+    "date": "2026-10-01",
+    "slot": "10:00",
+    "format": "trial-reel",
+    "artist": "KitKatClub",
+    "headline": "„One Night at KitKat“: ARD-Doku jetzt in der Mediathek",
+    "source_url": "https://groove.de/2026/09/30/one-night-at-kitkat-ard-doku-jetzt-in-der-mediathek-zu-sehen/",
+    "metricool_id": "385542823",
+    "status": "scheduled"
+  },
+  {
+    "date": "2026-10-01",
+    "slot": "11:00",
+    "format": "story",
+    "artist": "KitKatClub",
+    "headline": "„One Night at KitKat“: ARD-Doku jetzt in der Mediathek",
+    "source_url": "https://groove.de/2026/09/30/one-night-at-kitkat-ard-doku-jetzt-in-der-mediathek-zu-sehen/",
+    "metricool_id": "385542851",
+    "status": "scheduled"
+  },
+  {
+    "date": "2026-10-01",
+    "slot": "18:00",
+    "format": "news",
+    "artist": "Fatboy Slim",
+    "headline": "Fatboy Slim: über 100 Glastonbury-Sets – bezahlt wurde er nie",
+    "source_url": "https://mixmag.net/read/fatboy-slim-never-been-paid-play-glastonbury-festival-news",
+    "metricool_id": "385542878",
+    "status": "scheduled",
+    "collaborators": [
+      "thefestivalwire"
+    ]
+  },
+  {
+    "date": "2026-10-01",
+    "slot": "19:00",
+    "format": "story",
+    "artist": "Fatboy Slim",
+    "headline": "Fatboy Slim: über 100 Glastonbury-Sets – bezahlt wurde er nie",
+    "source_url": "https://mixmag.net/read/fatboy-slim-never-been-paid-play-glastonbury-festival-news",
+    "metricool_id": "385542897",
+    "status": "scheduled"
+  },
+  {
+    "date": "2026-10-01",
+    "slot": "13:00",
+    "format": "news",
+    "artist": "Knaack",
+    "headline": "Berliner Knaack-Klub: Bezirk lehnt Bauvorbescheid ab",
+    "source_url": "https://groove.de/2026/09/30/knaack-klub-in-prenzlauer-berg-eroeffnung-verschiebt-sich/",
+    "metricool_id": "385543857",
+    "status": "scheduled"
+  },
+  {
+    "date": "2026-10-01",
+    "slot": "14:00",
+    "format": "story",
+    "artist": "Knaack",
+    "headline": "Berliner Knaack-Klub: Bezirk lehnt Bauvorbescheid ab",
+    "source_url": "https://groove.de/2026/09/30/knaack-klub-in-prenzlauer-berg-eroeffnung-verschiebt-sich/",
+    "metricool_id": "385543885",
+    "status": "scheduled"
+  },
+  {
+    "date": "2026-10-01",
+    "slot": "15:00",
+    "format": "news",
+    "artist": "Ticketing UK",
+    "headline": "UK will Ticket-Wiederverkauf über Nennwert schneller verbieten",
+    "source_url": "https://mixmag.net/read/uk-culture-minister-promises-quick-introduction-of-proposed-ticket-touting-ban-news",
+    "metricool_id": "385543907",
+    "status": "scheduled"
+  },
+  {
+    "date": "2026-10-01",
+    "slot": "16:00",
+    "format": "story",
+    "artist": "Ticketing UK",
+    "headline": "UK will Ticket-Wiederverkauf über Nennwert schneller verbieten",
+    "source_url": "https://mixmag.net/read/uk-culture-minister-promises-quick-introduction-of-proposed-ticket-touting-ban-news",
+    "metricool_id": "385543925",
+    "status": "scheduled"
+  },
+  {
+    "date": "2026-10-01",
+    "slot": "20:00",
+    "format": "carousel-explainer",
+    "artist": "Berlin als Techno-Hauptstadt",
+    "headline": "Warum Berlin Techno-Hauptstadt ist",
+    "source_url": "library/explainers.json",
+    "metricool_id": "385543944",
+    "status": "scheduled"
+  },
+  {
+    "date": "2026-10-02 10:00",
+    "slot": "A",
+    "format": "reel",
+    "artist": "The Warehouse Project",
+    "headline": "Warehouse Project macht 2027 ein Pausenjahr",
+    "source_url": "https://mixmag.net/read/manchester-warehouse-project-taking-fallow-year-break-2027-news",
+    "metricool_id": 386366823,
+    "status": "scheduled"
+  },
+  {
+    "date": "2026-10-02 17:00",
+    "slot": "B",
+    "format": "carousel-nmf",
+    "artist": "New Music Friday (Garrix, Bicep, Madonna & Charli xcx, Dusky, Melé, Chloé Caillet, Kaskade, Alison Wonderland & WINK)",
+    "headline": "Die Releases der Woche",
+    "source_url": "https://djmag.com/news/martin-garrix-teases-new-single-featuring-his-own-vocals-dream-of-you-listen; https://edm.com/music-releases/alison-wonderland-wink-rescue-u; data/releases.json",
+    "metricool_id": 386367633,
+    "status": "scheduled"
+  },
+  {
+    "date": "2026-10-02 18:00",
+    "slot": "Story",
+    "format": "story",
+    "artist": "New Music Friday",
+    "headline": "Die Releases der Woche: Garrix, Bicep, Dusky & mehr",
+    "source_url": "siehe Slot B",
+    "metricool_id": 386367847,
+    "status": "scheduled"
+  }
 ]

@@ -1,195 +1,203 @@
 {
- "_info": "Releases, Stand 2026-09-29 (unvollständig: nur edm.com und Apple Music waren abrufbar). Tageslauf ergänzt neue Funde.",
- "recent": [
-  {
-   "artist": "Bicep",
-   "title": "Air / Lemonder / Viper",
-   "type": "single",
-   "release_date": "2026-09-25",
-   "label": "Ninja Tune",
-   "featuring": "SOARR, Saskia and Clark",
-   "source_url": "https://edm.com/music-releases/bicep-air-lemonder-viper/"
-  },
-  {
-   "artist": "Kaskade",
-   "title": "ORIGIN //",
-   "type": "album",
-   "release_date": "2026-09-25",
-   "label": "Arkade",
-   "source_url": "https://edm.com/music-releases/kaskade-new-album-origin/"
-  },
-  {
-   "artist": "SOFI TUKKER & OneRepublic",
-   "title": "TSUNAMI",
-   "type": "single",
-   "release_date": "2026-09-25",
-   "label": "Republic Records",
-   "source_url": "https://edm.com/music-releases/sofi-tukker-onerepublic-tsunami/"
-  },
-  {
-   "artist": "Petit Biscuit",
-   "title": "your spark remains",
-   "type": "EP",
-   "release_date": "2026-09-25",
-   "label": null,
-   "source_url": "https://edm.com/music-releases/petit-biscuit-your-spark-remains/"
-  },
-  {
-   "artist": "Dusky",
-   "title": "Signals",
-   "type": "album",
-   "release_date": "2026-09-25",
-   "label": "Anjunadeep",
-   "source_url": "https://djmag.com/reviews/dusky-signals"
-  },
-  {
-   "artist": "Melé",
-   "title": "Alive On Arrival",
-   "type": "album",
-   "release_date": "2026-09-25",
-   "label": "Defected Records",
-   "source_url": "https://djmag.com/reviews/mele-alive-arrival"
-  },
-  {
-   "artist": "Chloé Caillet",
-   "title": "Dance Again EP",
-   "type": "EP",
-   "release_date": "2026-09-25",
-   "label": "Ninja Tune",
-   "source_url": "https://djmag.com/reviews/chloe-caillet-dance-again-ep"
-  },
-  {
-   "artist": "Madonna & Charli xcx",
-   "title": "Danceteria Afterhours",
-   "type": "single",
-   "release_date": "2026-09-25",
-   "label": "Warner Records",
-   "source_url": "https://djmag.com/news/listen-madonna-and-charli-xcxs-collaborative-single-danceteria-afterhours"
-  },
-  {
-   "artist": "Charlotte de Witte",
-   "title": "The Resistance",
-   "type": "EP",
-   "release_date": "2026-09-24",
-   "label": null,
-   "featuring": "XSALT, Theo Nasa",
-   "source_url": "https://edm.com/music-releases/charlotte-de-witte-new-ep-the-resistance/"
-  },
-  {
-   "artist": "Boys Noize",
-   "title": "1+1+1",
-   "type": "single",
-   "release_date": "2026-09-24",
-   "label": "ONES and ZEROS",
-   "featuring": "ZEP",
-   "source_url": "https://edm.com/music-releases/boys-noize-announces-first-solo-album-five-years-7llvsion/"
-  },
-  {
-   "artist": "Introspekt & Vanessa Tha Finessa",
-   "title": "On Go",
-   "type": "single",
-   "release_date": "2026-09-24",
-   "label": "Tempa",
-   "source_url": "https://djmag.com/news/introspekt-and-vanessa-tha-finessa-link-new-single-go-listen"
-  },
-  {
-   "artist": "Knock2",
-   "title": "sound di alarm",
-   "type": "single",
-   "release_date": "2026-09-18",
-   "label": null,
-   "source_url": "https://edm.com/music-releases/knock2-sound-di-alarm/"
-  },
-  {
-   "artist": "Actress",
-   "title": "Radical Frame",
-   "type": "album",
-   "release_date": "2026-09-18",
-   "label": "Ninja Tune",
-   "source_url": "https://djmag.com/reviews/actress-radical-frame"
-  },
-  {
-   "artist": "K-Lone",
-   "title": "Have a few days off",
-   "type": "album",
-   "release_date": "2026-09-18",
-   "label": "Wisdom Teeth",
-   "source_url": "https://djmag.com/reviews/k-lone-have-few-days"
-  },
-  {
-   "artist": "CA7RIEL & Paco Amoroso, PinkPantheress, Fred again.., Etienne de Crécy",
-   "title": "Sexy Magic (from GTAVI: The Album)",
-   "type": "single",
-   "release_date": "2026-09-17",
-   "label": "Atlantic / Take-Two",
-   "source_url": "https://music.apple.com/us/album/sexy-magic-from-gtavi-the-album-single/6812476953"
-  }
- ],
- "upcoming": [
-  {
-   "artist": "Martin Garrix",
-   "title": "This Dream Of You",
-   "type": "single",
-   "release_date": "2026-10-02",
-   "label": null,
-   "announced_on": "2026-09-29",
-   "source_url": "https://djmag.com/news/martin-garrix-teases-new-single-featuring-his-own-vocals-dream-of-you-listen",
-   "note": "mit eigenem Gesang, Vorbote eines zweiten Albums"
-  },
-  {
-   "artist": "TSHA",
-   "title": "Mi Casa",
-   "type": "EP",
-   "release_date": "2026-10-16",
-   "label": "Major Recordings / Warner",
-   "announced_on": "2026-09-27",
-   "source_url": "https://djmag.com/news/tsha-announces-new-ep-mi-casa-shares-another-planet-listen"
-  },
-  {
-   "artist": "DJ Python",
-   "title": "To Accomplish Many Things",
-   "type": "EP",
-   "release_date": "2026-10-23",
-   "label": "XL Recordings",
-   "source_url": "https://mixmag.net/read/new-music-on-our-radar-this-week-boys-noize-madonna-charli-xcx-dj-python-news"
-  },
-  {
-   "artist": "Boys Noize",
-   "title": "7LLVSION",
-   "type": "album",
-   "release_date": "2026-11-06",
-   "label": "ONES and ZEROS",
-   "featuring": "Brutalismus 3000, TAICHU, Abra u. a.",
-   "announced_on": "2026-09-24",
-   "source_url": "https://edm.com/music-releases/boys-noize-announces-first-solo-album-five-years-7llvsion/"
-  },
-  {
-   "artist": "The Prodigy",
-   "title": "Breathe (30 Jahre, Vinyl-Reissue mit Remixen)",
-   "type": "remix",
-   "release_date": "2026-11-13",
-   "label": "XL Recordings",
-   "announced_on": "2026-09-25",
-   "source_url": "https://djmag.com/news/prodigys-breathe-set-30th-anniversary-vinyl-reissue"
-  },
-  {
-   "artist": "Various Artists (u. a. Fred again.., Bob Moses, Elderbrook, Travis Scott, Guy-Manuel de Homem-Christo)",
-   "title": "Grand Theft Auto VI: The Album",
-   "type": "album",
-   "release_date": "2026-11-19",
-   "label": "Atlantic Records / Rockstar Games",
-   "announced_on": "2026-09-18",
-   "source_url": "https://edm.com/news/gta-6-album-announced/"
-  },
-  {
-   "artist": "MPH",
-   "title": "Here, Forever",
-   "type": "album",
-   "release_date": "2026-11-20",
-   "label": "Disorder / Capitol Records",
-   "featuring": "Skrillex (Single „Mirage“)",
-   "announced_on": "2026-09-15",
-   "source_url": "https://edm.com/news/mph-announces-new-album-here-forever/"
-  }
- ]
+  "_info": "Releases, Stand 2026-09-29 (unvollständig: nur edm.com und Apple Music waren abrufbar). Tageslauf ergänzt neue Funde.",
+  "recent": [
+    {
+      "artist": "Martin Garrix",
+      "title": "This Dream Of You",
+      "type": "single",
+      "release_date": "2026-10-02",
+      "label": null,
+      "announced_on": "2026-09-29",
+      "source_url": "https://djmag.com/news/martin-garrix-teases-new-single-featuring-his-own-vocals-dream-of-you-listen",
+      "note": "mit eigenem Gesang, Vorbote eines zweiten Albums; Release-Datum laut Quellen 01.–02.10."
+    },
+    {
+      "artist": "Alison Wonderland & WINK",
+      "title": "RESCUE U",
+      "type": "single",
+      "release_date": "2026-10-01",
+      "label": "FMU Records",
+      "source_url": "https://edm.com/music-releases/alison-wonderland-wink-rescue-u/"
+    },
+    {
+      "artist": "Bicep",
+      "title": "Air / Lemonder / Viper",
+      "type": "single",
+      "release_date": "2026-09-25",
+      "label": "Ninja Tune",
+      "featuring": "SOARR, Saskia and Clark",
+      "source_url": "https://edm.com/music-releases/bicep-air-lemonder-viper/"
+    },
+    {
+      "artist": "Kaskade",
+      "title": "ORIGIN //",
+      "type": "album",
+      "release_date": "2026-09-25",
+      "label": "Arkade",
+      "source_url": "https://edm.com/music-releases/kaskade-new-album-origin/"
+    },
+    {
+      "artist": "SOFI TUKKER & OneRepublic",
+      "title": "TSUNAMI",
+      "type": "single",
+      "release_date": "2026-09-25",
+      "label": "Republic Records",
+      "source_url": "https://edm.com/music-releases/sofi-tukker-onerepublic-tsunami/"
+    },
+    {
+      "artist": "Petit Biscuit",
+      "title": "your spark remains",
+      "type": "EP",
+      "release_date": "2026-09-25",
+      "label": null,
+      "source_url": "https://edm.com/music-releases/petit-biscuit-your-spark-remains/"
+    },
+    {
+      "artist": "Dusky",
+      "title": "Signals",
+      "type": "album",
+      "release_date": "2026-09-25",
+      "label": "Anjunadeep",
+      "source_url": "https://djmag.com/reviews/dusky-signals"
+    },
+    {
+      "artist": "Melé",
+      "title": "Alive On Arrival",
+      "type": "album",
+      "release_date": "2026-09-25",
+      "label": "Defected Records",
+      "source_url": "https://djmag.com/reviews/mele-alive-arrival"
+    },
+    {
+      "artist": "Chloé Caillet",
+      "title": "Dance Again EP",
+      "type": "EP",
+      "release_date": "2026-09-25",
+      "label": "Ninja Tune",
+      "source_url": "https://djmag.com/reviews/chloe-caillet-dance-again-ep"
+    },
+    {
+      "artist": "Madonna & Charli xcx",
+      "title": "Danceteria Afterhours",
+      "type": "single",
+      "release_date": "2026-09-25",
+      "label": "Warner Records",
+      "source_url": "https://djmag.com/news/listen-madonna-and-charli-xcxs-collaborative-single-danceteria-afterhours"
+    },
+    {
+      "artist": "Charlotte de Witte",
+      "title": "The Resistance",
+      "type": "EP",
+      "release_date": "2026-09-24",
+      "label": null,
+      "featuring": "XSALT, Theo Nasa",
+      "source_url": "https://edm.com/music-releases/charlotte-de-witte-new-ep-the-resistance/"
+    },
+    {
+      "artist": "Boys Noize",
+      "title": "1+1+1",
+      "type": "single",
+      "release_date": "2026-09-24",
+      "label": "ONES and ZEROS",
+      "featuring": "ZEP",
+      "source_url": "https://edm.com/music-releases/boys-noize-announces-first-solo-album-five-years-7llvsion/"
+    },
+    {
+      "artist": "Introspekt & Vanessa Tha Finessa",
+      "title": "On Go",
+      "type": "single",
+      "release_date": "2026-09-24",
+      "label": "Tempa",
+      "source_url": "https://djmag.com/news/introspekt-and-vanessa-tha-finessa-link-new-single-go-listen"
+    },
+    {
+      "artist": "Knock2",
+      "title": "sound di alarm",
+      "type": "single",
+      "release_date": "2026-09-18",
+      "label": null,
+      "source_url": "https://edm.com/music-releases/knock2-sound-di-alarm/"
+    },
+    {
+      "artist": "Actress",
+      "title": "Radical Frame",
+      "type": "album",
+      "release_date": "2026-09-18",
+      "label": "Ninja Tune",
+      "source_url": "https://djmag.com/reviews/actress-radical-frame"
+    },
+    {
+      "artist": "K-Lone",
+      "title": "Have a few days off",
+      "type": "album",
+      "release_date": "2026-09-18",
+      "label": "Wisdom Teeth",
+      "source_url": "https://djmag.com/reviews/k-lone-have-few-days"
+    },
+    {
+      "artist": "CA7RIEL & Paco Amoroso, PinkPantheress, Fred again.., Etienne de Crécy",
+      "title": "Sexy Magic (from GTAVI: The Album)",
+      "type": "single",
+      "release_date": "2026-09-17",
+      "label": "Atlantic / Take-Two",
+      "source_url": "https://music.apple.com/us/album/sexy-magic-from-gtavi-the-album-single/6812476953"
+    }
+  ],
+  "upcoming": [
+    {
+      "artist": "TSHA",
+      "title": "Mi Casa",
+      "type": "EP",
+      "release_date": "2026-10-16",
+      "label": "Major Recordings / Warner",
+      "announced_on": "2026-09-27",
+      "source_url": "https://djmag.com/news/tsha-announces-new-ep-mi-casa-shares-another-planet-listen"
+    },
+    {
+      "artist": "DJ Python",
+      "title": "To Accomplish Many Things",
+      "type": "EP",
+      "release_date": "2026-10-23",
+      "label": "XL Recordings",
+      "source_url": "https://mixmag.net/read/new-music-on-our-radar-this-week-boys-noize-madonna-charli-xcx-dj-python-news"
+    },
+    {
+      "artist": "Boys Noize",
+      "title": "7LLVSION",
+      "type": "album",
+      "release_date": "2026-11-06",
+      "label": "ONES and ZEROS",
+      "featuring": "Brutalismus 3000, TAICHU, Abra u. a.",
+      "announced_on": "2026-09-24",
+      "source_url": "https://edm.com/music-releases/boys-noize-announces-first-solo-album-five-years-7llvsion/"
+    },
+    {
+      "artist": "The Prodigy",
+      "title": "Breathe (30 Jahre, Vinyl-Reissue mit Remixen)",
+      "type": "remix",
+      "release_date": "2026-11-13",
+      "label": "XL Recordings",
+      "announced_on": "2026-09-25",
+      "source_url": "https://djmag.com/news/prodigys-breathe-set-30th-anniversary-vinyl-reissue"
+    },
+    {
+      "artist": "Various Artists (u. a. Fred again.., Bob Moses, Elderbrook, Travis Scott, Guy-Manuel de Homem-Christo)",
+      "title": "Grand Theft Auto VI: The Album",
+      "type": "album",
+      "release_date": "2026-11-19",
+      "label": "Atlantic Records / Rockstar Games",
+      "announced_on": "2026-09-18",
+      "source_url": "https://edm.com/news/gta-6-album-announced/"
+    },
+    {
+      "artist": "MPH",
+      "title": "Here, Forever",
+      "type": "album",
+      "release_date": "2026-11-20",
+      "label": "Disorder / Capitol Records",
+      "featuring": "Skrillex (Single „Mirage“)",
+      "announced_on": "2026-09-15",
+      "source_url": "https://edm.com/news/mph-announces-new-album-here-forever/"
+    }
+  ]
 }
