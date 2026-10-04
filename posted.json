@@ -235,5 +235,45 @@
   "source_url": "library/specials/festival-kalender-2027.json",
   "metricool_id": 387143822,
   "status": "scheduled"
+ },
+ {
+  "date": "2026-10-04",
+  "slot": "10:00",
+  "format": "reel",
+  "artist": "Dom Dolla, Solomun & Skepta",
+  "headline": "Dom Dolla, Solomun & Skepta: erste gemeinsame Single ist da",
+  "source_url": "https://djmag.com/news/listen-dom-dolla-solomun-and-skeptas-collaborative-single-danger-danger",
+  "metricool_id": "387634791",
+  "status": "scheduled"
+ },
+ {
+  "date": "2026-10-04",
+  "slot": "11:00",
+  "format": "story",
+  "artist": "Dom Dolla, Solomun & Skepta",
+  "headline": "Dom Dolla, Solomun & Skepta: erste gemeinsame Single ist da",
+  "source_url": "https://djmag.com/news/listen-dom-dolla-solomun-and-skeptas-collaborative-single-danger-danger",
+  "metricool_id": "387634861",
+  "status": "scheduled"
+ },
+ {
+  "date": "2026-10-04",
+  "slot": "18:00",
+  "format": "carousel-wochenrueckblick",
+  "artist": "Wochenrückblick (Lighthouse, Warehouse Project, KitKat, Fred again.., Fatboy Slim)",
+  "headline": "Die Woche in 5 News",
+  "source_url": "https://groove.de/2026/10/01/lighthouse-festival-2027-findet-open-air-zum-letzten-mal-statt/; https://djmag.com/news/warehouse-project-take-fallow-year-2027; https://groove.de/2026/09/30/one-night-at-kitkat-ard-doku-jetzt-in-der-mediathek-zu-sehen/; https://djmag.com/news/fred-again-speaks-out-against-ai-music-process-magic; https://weraveyou.com/2026/09/fatboy-slim-never-paid-glastonbury-100-sets/",
+  "metricool_id": "387634966",
+  "status": "scheduled"
+ },
+ {
+  "date": "2026-10-04",
+  "slot": "19:00",
+  "format": "story",
+  "artist": "Wochenrückblick",
+  "headline": "Die Woche in 5 News",
+  "source_url": "siehe 18:00",
+  "metricool_id": "387634982",
+  "status": "scheduled"
  }
 ]
