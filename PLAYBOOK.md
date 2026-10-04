@@ -6,7 +6,16 @@ Positionierung: der deutschsprachige News-Kanal für elektronische Musik – kur
 Phase: **Aufbau bis Traktion** (Ziel 2.500 Follower). Reichweite bei Nicht-Followern hat Vorrang.
 
 ## Learnings (wird jeden Sonntag von der Wochenanalyse aktualisiert – hat Vorrang vor den Regeln unten)
-- Noch keine Daten. Erste Auswertung am Sonntag, 04.10.2026.
+- Stand 04.10.2026 (Woche 1, 29.09.–04.10.): @sidechain.news hat laut Metricool erst ~1 Follower; Reichweite pro Post 0–5, Shares/Saves/neue Follower überall 0. Alle Regeln unten sind **Tendenzen** (Stichprobe < 3 pro Gruppe oder Werte im Rauschbereich) – nicht überoptimieren, den Plan halten.
+- **Reels bleiben Slot A.** Einziges Format mit messbarer Reichweite (3 Reels: Ø 3,3 Reichweite / 6,3 Views vs. 9 Bild-/Karussell-Posts: Ø 0,2 / 3,4). An Tagen ohne Wochenformat darf auch Slot B ein Reel sein (Test für Woche 2).
+- **Reel-Hook in der ersten Sekunde:** Ø Wiedergabezeit nur 1,4–2,7 s von 8 s. Reel-Headlines ≤ 45 Zeichen, Kern (Artist + Ereignis) vorne, keine Einleitung.
+- **Nicht mehr als 2 Feed-Posts pro Tag** (+ Stories). Am 01.10. liefen 5 Feed-Posts – alle mit Reichweite 0; mehr Volumen bringt bei dieser Followerzahl nichts und kannibalisiert.
+- **Hashtags strikt max. 5, immer #sidechainnews.** Die ersten Posts (Fred again.., Josh Baker/Kettama/Prospa) hatten 7 Tags inkl. #musicnews/#sidechain – nicht mehr verwenden.
+- **Trial Reels (Di/Do/Sa) sind nicht messbar:** KitKat (01.10.) und Lighthouse (03.10.) tauchen in den Metricool-Reel-Daten nicht auf. Weiter testen, aber in `posted.json` als `trial-reel` loggen; bleiben sie nächste Woche unsichtbar, Di/Do/Sa wieder normale Reels.
+- **Stories liefern keine Daten** (0 Einträge im Stories-Connector). Stories nur noch nach Slot A planen, nicht mehr nach Slot B, bis klar ist, ob sie ausgespielt werden.
+- **Collab @thefestivalwire nur, wenn die Einladung angenommen wird:** Festival-Kalender und Fatboy Slim (beide mit Collab) hatten Reichweite 0 – die Collab hat keine Reichweite gebracht. Beibehalten (max. 3×/Woche), Wirkung nächste Woche erneut prüfen.
+- **Uhrzeiten:** Slot A um ~10 Uhr lieferte die meisten Reichweiten-Treffer (alle Reels); Bilder 13–20 Uhr fast alle 0, einzige Ausnahme Fred again.. um 21:45 (Reichweite 2). Kein belastbarer Zeiteffekt – Slot A weiter 09–11 Uhr, Slot B weiter nach `getBestTimeToPostByNetwork`.
+- **DACH-Positionierung beibehalten.** DACH-Themen (Knaack, Berlin-Erklärer, Festival-Kalender) und internationale News lagen gleich niedrig; Unterschied wegen Format nicht messbar. Festival-Kalender hatte mit 6 Views den besten Karussell-Wert – Speicher-/Service-Karussells weiter am Wochenende.
 
 ## Daten & Bibliothek im Repo (nutzen!)
 - `data/handles.json` – verifizierte Instagram-Handles. Für @-Erwähnungen nur Einträge mit `verified: true`. Neue, belegte Handles ergänzen (mit Quelle).
