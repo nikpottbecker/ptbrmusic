@@ -275,5 +275,33 @@
   "source_url": "siehe 18:00",
   "metricool_id": "387634982",
   "status": "scheduled"
+ },
+ {
+  "date": "2026-10-05 09:30",
+  "slot": "A",
+  "format": "reel",
+  "artist": "Purple Disco Machine",
+  "headline": "Purple Disco Machine: Tour-Vorverkauf startet",
+  "source_url": "https://www.radiodresden.de/beitrag/purple-disco-machine-kuendigt-cosmotropia-live-tour-2027-an-894605/",
+  "metricool_id": 388203908
+ },
+ {
+  "date": "2026-10-05 10:30",
+  "slot": "Story",
+  "format": "story",
+  "artist": "Purple Disco Machine",
+  "headline": "Purple Disco Machine: Tour-Vorverkauf startet",
+  "source_url": "https://www.radiodresden.de/beitrag/purple-disco-machine-kuendigt-cosmotropia-live-tour-2027-an-894605/",
+  "metricool_id": 388203925
+ },
+ {
+  "date": "2026-10-05 18:00",
+  "slot": "B",
+  "format": "carousel-tour-radar",
+  "artist": "Tour-Radar (Paul Kalkbrenner, Overmono, Nia Archives, Eric Prydz, Fritz Kalkbrenner, Chase & Status, Bicep)",
+  "headline": "Tour-Radar: Die nächsten Shows in DE, AT & CH",
+  "source_url": "data/tours.json",
+  "metricool_id": 388203975,
+  "collab": "thefestivalwire"
  }
 ]
