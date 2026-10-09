@@ -69,9 +69,9 @@ def cover(query):
 
 def openverse(query):
     q = urllib.parse.urlencode({"q": query, "license_type": "commercial,modification", "page_size": 20,
-                                "aspect_ratio": "tall,square,wide", "size": "large", "mature": "false"})
+                                "mature": "false"})
     for r in get("https://api.openverse.org/v1/images/?" + q).get("results") or []:
-        if min(r.get("width") or 0, r.get("height") or 0) < 900:
+        if min(r.get("width") or 0, r.get("height") or 0) < 700:
             continue
         lic = f"CC {str(r.get('license', '')).upper()} {r.get('license_version') or ''}".strip()
         if r.get("license") in ("pdm", "cc0"):

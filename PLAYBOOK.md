@@ -1,4 +1,4 @@
-# Sidechain – täglicher Auto-Lauf (v2)
+# Sidechain – täglicher Auto-Lauf (v3: Fotos Pflicht, keine Stories)
 
 Instagram: **@sidechain.news** · Metricool blogId: **7154946** · Zeitzone: **Europe/Berlin**
 Sprache: **Deutsch** (Artist-Namen, Track- und Albumtitel im Original).
@@ -11,8 +11,9 @@ Phase: **Aufbau bis Traktion** (Ziel 2.500 Follower). Reichweite bei Nicht-Follo
 - **Reel-Hook in der ersten Sekunde:** Ø Wiedergabezeit nur 1,4–2,7 s von 8 s. Reel-Headlines ≤ 45 Zeichen, Kern (Artist + Ereignis) vorne, keine Einleitung.
 - **Nicht mehr als 2 Feed-Posts pro Tag** (+ Stories). Am 01.10. liefen 5 Feed-Posts – alle mit Reichweite 0; mehr Volumen bringt bei dieser Followerzahl nichts und kannibalisiert.
 - **Hashtags strikt max. 5, immer #sidechainnews.** Die ersten Posts (Fred again.., Josh Baker/Kettama/Prospa) hatten 7 Tags inkl. #musicnews/#sidechain – nicht mehr verwenden.
-- **Trial Reels (Di/Do/Sa) sind nicht messbar:** KitKat (01.10.) und Lighthouse (03.10.) tauchen in den Metricool-Reel-Daten nicht auf. Weiter testen, aber in `posted.json` als `trial-reel` loggen; bleiben sie nächste Woche unsichtbar, Di/Do/Sa wieder normale Reels.
-- **Stories liefern keine Daten** (0 Einträge im Stories-Connector). Stories nur noch nach Slot A planen, nicht mehr nach Slot B, bis klar ist, ob sie ausgespielt werden.
+- **Keine Stories mehr (Entscheidung Nik, 09.10.2026):** Das Metricool-Gratiskontingent war ab 05.10. aufgebraucht ("account limit"), Stories verbrauchten die Hälfte. Nur noch Feed-Posts und Reels.
+- **Trial Reels scheitern:** Metricool meldet, dass der Account die Follower-Mindestzahl für Trial Reels nicht erreicht. Bis auf Weiteres nur normale Reels (`type: "REEL"`).
+- **Jeder Post braucht ein Foto (Entscheidung Nik, 09.10.2026):** reine Text-Grafiken wirken langweilig. Siehe Abschnitt 6a.
 - **Collab @thefestivalwire nur, wenn die Einladung angenommen wird:** Festival-Kalender und Fatboy Slim (beide mit Collab) hatten Reichweite 0 – die Collab hat keine Reichweite gebracht. Beibehalten (max. 3×/Woche), Wirkung nächste Woche erneut prüfen.
 - **Uhrzeiten:** Slot A um ~10 Uhr lieferte die meisten Reichweiten-Treffer (alle Reels); Bilder 13–20 Uhr fast alle 0, einzige Ausnahme Fred again.. um 21:45 (Reichweite 2). Kein belastbarer Zeiteffekt – Slot A weiter 09–11 Uhr, Slot B weiter nach `getBestTimeToPostByNetwork`.
 - **DACH-Positionierung beibehalten.** DACH-Themen (Knaack, Berlin-Erklärer, Festival-Kalender) und internationale News lagen gleich niedrig; Unterschied wegen Format nicht messbar. Festival-Kalender hatte mit 6 Views den besten Karussell-Wert – Speicher-/Service-Karussells weiter am Wochenende.
@@ -22,7 +23,7 @@ Phase: **Aufbau bis Traktion** (Ziel 2.500 Follower). Reichweite bei Nicht-Follo
 - `data/tours.json` – verifizierte DACH-Termine + Festival-Infos 2027. Grundlage für Tour-Radar und Ticket-Posts. Vergangene Termine ignorieren, neue Funde mit Quelle ergänzen.
 - `data/releases.json` – Releases (letzte Wochen + angekündigt). Grundlage für New Music Friday. Neue Funde ergänzen.
 - `library/explainers.json` – 5 belegte Erklär-Karussells (UK Garage, Melodic Techno, Techno vs. House, Love Parade, Berlin als Techno-Hauptstadt), Tag ERKLÄRT. Gleicher Befehl mit dem `topic` statt Artist. Gut für Samstag/Sonntag-Abende ohne News und zum Speichern/Teilen.
-- `library/profiles.json` + `node make-profile.js "<Artist>" media/<datei>.jpg <TT.MM.JJJJ>` – 29 fertige, belegte „Wer ist …?“-Karussells (erzeugt Slides + `.caption.txt`). Für den Mittwoch und als **Fallback**, wenn es keine gute News gibt. Ein Profil höchstens alle 60 Tage (in `posted.json` prüfen); bevorzugt Artists, die gerade in den News sind. Neue Profile nur mit belegten Fakten ergänzen.
+- `library/profiles.json` + `node make-profile.js "<Artist>" media/<datei>.jpg <TT.MM.JJJJ> photos/<foto>.jpg [focus]` – 29 fertige, belegte „Wer ist …?“-Karussells (erzeugt Slides + `.caption.txt`). Für den Mittwoch und als **Fallback**, wenn es keine gute News gibt. Ein Profil höchstens alle 60 Tage (in `posted.json` prüfen); bevorzugt Artists, die gerade in den News sind. Neue Profile nur mit belegten Fakten ergänzen.
 - `data/landscape.md` – Wettbewerbs- und Wachstumsrecherche (Hintergrund, nicht bei jedem Lauf lesen).
 
 ## 0. Setup (jeder Lauf startet in einer frischen Umgebung)
@@ -34,9 +35,8 @@ Phase: **Aufbau bis Traktion** (Ziel 2.500 Follower). Reichweite bei Nicht-Follo
 ## 1. Tagesplan
 | Slot | Zeitfenster | Inhalt | Format |
 |---|---|---|---|
-| A | beste Stunde 07–13 Uhr | stärkste Story des Tages | **Reel** (`format: "reel"`) – Di/Do/Sa als **Trial Reel** (`instagramData.type: "TRIAL_REEL"`, wird zuerst Nicht-Followern gezeigt), sonst normales Reel |
+| A | beste Stunde 07–13 Uhr | stärkste Story des Tages | **Reel** (`format: "reel"`, immer `type: "REEL"`, keine Trial Reels) |
 | B | beste Stunde 16–21 Uhr (≥ 5 h nach A) | zweite Story – oder an Wochenformat-Tagen das Karussell | News-Bild / Karussell |
-| Story | je 60 min nach A und B | dieselbe News als Story | `format: "story"` |
 
 **Wochenformate (Slot B):**
 - **Montag – „Tour-Radar“:** Karussell mit anstehenden DACH-Terminen (neue Ankündigungen der letzten 7 Tage zuerst, sonst die nächsten Highlights aus `data/tours.json`). Ein Slide pro Termin: kicker = Land (DE/AT/CH), title = Artist, detail = Stadt + Venue, meta = Datum + Ticketinfo. Österreich und die Schweiz bewusst mitnehmen – dort gibt es kaum Konkurrenz.
@@ -49,7 +49,7 @@ Findet sich für ein Wochenformat nicht genug Belegtes (mind. 3 Items), stattdes
 
 Kein guter Stoff → Slot B mit einem Evergreen-Karussell aus der Bibliothek füllen (Regeln oben) oder weglassen. **Niemals erfundene oder unbelegte Inhalte.**
 
-**Vorab geplante Posts:** Liegt für heute im Fenster von Slot A oder B schon ein Feed-Post in Metricool (z. B. von Claude vorab eingeplant), diesen Slot **nicht** zusätzlich befüllen – nur die Story dazu planen, falls noch keine existiert.
+**Vorab geplante Posts:** Liegt für heute im Fenster von Slot A oder B schon ein Feed-Post in Metricool (z. B. von Claude vorab eingeplant), diesen Slot **nicht** zusätzlich befüllen.
 
 **Specials:** `library/specials/*.json` sind fertige Karussell-Specs (inkl. `caption` und `alt`). Mit `node render.js <spec>` rendern (vorher `date` setzen). Nur einplanen, wenn in `posted.json` noch nicht vorhanden.
 
@@ -91,12 +91,26 @@ Kein guter Stoff → Slot B mit einem Evergreen-Karussell aus der Bibliothek fü
 | `template: "tour"` | Bild | headline, subline, dates[{date, city, venue}] (max 6), source, date |
 | `template: "carousel"` | Bilder `<out>-1.jpg … -N.jpg` | cover{tag, headline, subline, dark?}, items[{kicker?, title, detail?, meta?}] (max 8), source, date – Outro-Slide kommt automatisch |
 | `format: "reel"` | MP4 1080×1920, 8 s | wie news (inkl. `photo`) |
-| `format: "story"` | Bild 1080×1920 | wie news |
+| Karussell mit Fotos | | `cover.photo`/`focus`/`credit`, `items[].photo`/`focus`/`credit` → Foto-Slides |
 
 - Tags: NEWS, BREAKING, NEW RELEASE, NEW ALBUM, TOUR, FESTIVAL, INTERVIEW, NEW MUSIC FRIDAY, TOUR-RADAR, HINTERGRUND, WOCHENRÜCKBLICK. `dark: true` nur für BREAKING/sehr große News.
-- `photo` nur, wenn in `photos/` ein passendes Foto liegt (Dateiname = artist_credit.jpg); Credit in `source`.
+- **`photo` ist Pflicht** bei news, release und reel, beim Karussell für das Cover und möglichst jeden Slide (Ausnahme: Listen-Slides mit `rows`, Tour-Template). Beschaffung: Abschnitt 6a. Credit immer sichtbar: bei news/reel in `source` anhängen („Mixmag · Foto: Name / CC BY-SA 4.0"), bei Karussell-Slides im Feld `credit`.
+- `focus` (CSS background-position, z. B. `"50% 25%"`) so wählen, dass das Gesicht nicht von Pills oder der Textkarte verdeckt wird – Ergebnis immer ansehen.
 - `date` = heute, TT.MM.JJJJ.
 - Jedes Ergebnis ansehen (Read; beim Reel vorher mit `ffmpeg -ss 7.5 -i r.mp4 -frames:v 1 check.jpg` ein Standbild ziehen): nichts abgeschnitten, keine Tippfehler, Umlaute korrekt.
+
+## 6a. Fotos beschaffen (vor dem Rendern)
+Die Shell kommt nicht an fremde Websites. Fotos holt deshalb die GitHub Action „Sidechain Fotos holen" (`.github/workflows/fetch-photos.yml`, Skript `tools/fetch_photos.py`).
+1. Erst `photos/credits.json` prüfen – liegt schon ein passendes Foto in `photos/`, das nehmen.
+2. Sonst `photos/queue.json` schreiben (Liste), committen, pushen. Erlaubte Quellen in dieser Reihenfolge:
+   - `{"file":"<artist-slug>.jpg","commons":"<Artist-Name>"}` – Wikimedia Commons, nur freie Lizenzen (CC BY / CC BY-SA / CC0 / PD; kein NC/ND). Erste Wahl für Artist-Fotos.
+   - `{"file":"cover-<slug>.jpg","cover":"<Artist> <Titel>"}` – Release-Cover (iTunes-Suche). Für Release-News, New Music Friday und als Ersatz bei Artist-News mit aktuellem Release. Prüfen, dass Artist und Titel im Ergebnis stimmen.
+   - `{"file":"<slug>.jpg","url":"<direkter Bild-Link>","credit":"Foto: <Fotograf> / <Label/Agentur>","page":"<Pressekit-Seite>"}` – nur aus **offiziellen Pressekits/Pressebereichen** (Label, Agentur, Festival, Artist-Website), die die Bilder ausdrücklich für Presse/Redaktion freigeben. Credit wie im Pressekit angegeben; ohne bekannten Credit nicht verwenden.
+   - `{"file":"<slug>.jpg","openverse":"<englische Suchbegriffe>"}` – frei lizenzierte Stimmungsfotos (Club, Crowd, Festival-Gelände, Stadt) für Themen ohne Artist (Clubkultur, Ticketing, Festival-Allgemein).
+3. Warten, bis die Action fertig ist: alle 15 s `git pull --rebase origin sidechain-media`, bis ein Commit „Fotos geholt" kommt (max. 4 min). Ergebnis in `photos/queue.result.json`; Credits stehen in `photos/credits.json`.
+4. Jedes Foto ansehen (Read): Passt es zur Person/zum Thema? Kein falscher Artist, keine Wasserzeichen, nichts Peinliches. Sonst nächste Quelle.
+5. **Tabu:** Fotos aus Google-Bildersuche, Instagram, Getty/Agenturen, Nachrichtenartikeln ohne Pressefreigabe, KI-generierte Fotos echter Personen. Findet sich kein erlaubtes Foto, eine andere Story nehmen – oder ein Stimmungsfoto über Openverse.
+6. Fotos bleiben in `photos/` (Wiederverwendung), nicht löschen.
 
 ## 7. Hochladen & einplanen
 1. Dateien nach `media/<JJJJ-MM-TT>-<slug>…` kopieren, committen, `git push origin sidechain-media`. Commit-Messages enden mit den Attributionszeilen aus dem System-Reminder der Session.
@@ -105,11 +119,10 @@ Kein guter Stoff → Slot B mit einem Evergreen-Karussell aus der Bibliothek fü
    - **Reel:** media [mp4], `instagramData: {"type":"REEL","showReelOnFeed":true,"collaborators":[],"isAiGenerated":false}`, `videoCoverMilliseconds: 7500`.
    - **Bild:** media [jpg], `instagramData.type: "POST"`.
    - **Karussell:** media = alle Slides in Reihenfolge, `type: "POST"`.
-   - **Story:** media [story.jpg], `type: "STORY"`, **kein** `text`.
    - Ist **threads** verbunden: Bild-/Karussell-Posts zusätzlich mit provider `threads` (`threadsData: {}`) – gleicher Text ohne Hashtags. Ist **tiktok** verbunden: Reels zusätzlich mit provider `tiktok` (`tiktokData: {"privacyOption":"PUBLIC_TO_EVERYONE"}`).
 4. Nur wenn die Antwort `media` auf `static.metricool.com` zeigt: Dateien mit `git rm` entfernen, committen, pushen.
-5. Fehler: höchstens einmal mit korrigierten Daten erneut. Meldet Metricool ein Plan-/Kontingent-Limit: zuerst Stories weglassen, dann Slot B – und in der Zusammenfassung melden.
+5. Fehler: höchstens einmal mit korrigierten Daten erneut. Meldet Metricool ein Plan-/Kontingent-Limit („account limit"): nichts weiter einplanen und in der Zusammenfassung melden, dass Nik das Kontingent prüfen muss.
 
 ## 8. Log & Abschluss
-- Pro Post in `posted.json` anhängen: `{"date","slot","format","artist","headline","source_url","metricool_id"}`; committen, pushen.
+- Pro Post in `posted.json` anhängen: `{"date","slot","format","artist","headline","source_url","photo","metricool_id"}`; committen, pushen.
 - Zum Schluss kurze Zusammenfassung: Posts mit Uhrzeit, Format, Headline, Quelle – oder warum nichts gepostet wurde. Bei Fehlern genau sagen, was Nik tun muss.

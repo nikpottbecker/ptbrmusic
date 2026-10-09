@@ -7,6 +7,7 @@
 //   template "tour"    – headline, subline, dates[{date,city,venue}], source, date
 // Carousel (1080×1350 JPEGs, out-1.jpg … out-N.jpg):
 //   template "carousel" – cover{tag, headline, subline, dark?}, items[{kicker?, title, detail?, meta?}], source, date
+//   cover.photo / item.photo (+ focus, credit) → Foto-Slides.
 //   Slides: cover + one slide per item (max 8) + outro. An item with rows[{date,name,detail}] (max 6) becomes a list slide. Metricool media = all files in order.
 // Vertical (1080×1920):
 //   format "reel"  → MP4, 8 s, 30 fps, animated (same fields as news, photo optional)
@@ -59,7 +60,7 @@ h1{margin:0;font-weight:700;line-height:1.02;letter-spacing:-.035em}
 function newsPhoto(s) {
   const fs_ = size(s.headline, [[40, 80], [60, 74], [80, 66], [999, 58]]);
   return `<div class="root" style="background:#111 url('${fileUrl(s.photo)}') ${s.focus || '50% 25%'}/cover no-repeat">
-<div class="top" style="position:absolute;top:48px;left:48px;right:48px">${brand}<div class="pill">${esc(s.artist)}</div></div>
+<div class="top" style="position:absolute;top:48px;left:48px;right:48px">${brand}${s.artist ? `<div class="pill">${esc(s.artist)}</div>` : ''}</div>
 <div style="position:absolute;left:40px;right:40px;bottom:40px;background:#fff;border-radius:44px;padding:52px 56px 44px;display:flex;flex-direction:column;gap:24px">
 <div class="tag">${esc(s.tag || 'NEWS')}</div>
 <h1 style="font-size:${fs_}px">${esc(s.headline)}</h1>
@@ -124,6 +125,7 @@ ${s.subline ? `<p class="sub">${esc(s.subline)}</p>` : ''}
 
 // ---------- carousel ----------
 function slideItem(s, it, i, n) {
+  if (it.photo) return slideItemPhoto(s, it, i, n);
   const fs_ = size(it.title, [[18, 104], [30, 88], [48, 72], [999, 60]]);
   return `<div class="root" style="background:#f2f2ef;padding:64px;display:flex;flex-direction:column">
 <div class="top">${brand}<div class="pill" style="background:#fff">${i} / ${n}</div></div>
@@ -136,6 +138,19 @@ ${it.meta ? `<div style="background:#fff;border-radius:28px;padding:22px 28px;fo
 </div>
 <div class="foot" style="border-color:#dcdcd7"><span>${esc(s.source)}</span><span>Weiter wischen →</span></div>
 </div>`;
+}
+
+function slideItemPhoto(s, it, i, n) {
+  const fs_ = size(it.title, [[18, 84], [30, 72], [48, 62], [999, 54]]);
+  return `<div class="root" style="background:#111 url('${fileUrl(it.photo)}') ${it.focus || '50% 25%'}/cover no-repeat">
+<div class="top" style="position:absolute;top:48px;left:48px;right:48px">${brand}<div class="pill">${i} / ${n}</div></div>
+<div style="position:absolute;left:40px;right:40px;bottom:40px;background:#fff;border-radius:44px;padding:44px 52px 36px;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;align-items:center;gap:18px"><span style="font-size:64px;font-weight:800;letter-spacing:-.05em;line-height:.8">${String(i).padStart(2, '0')}</span>${it.kicker ? `<div class="tag" style="align-self:auto">${esc(it.kicker)}</div>` : ''}</div>
+<h1 style="font-size:${fs_}px;line-height:1;letter-spacing:-.04em">${esc(it.title)}</h1>
+${it.detail ? `<p class="sub" style="font-size:30px">${esc(it.detail)}</p>` : ''}
+${it.meta ? `<div style="font-size:26px;font-weight:600">${esc(it.meta)}</div>` : ''}
+<div class="foot"><span>${esc(it.credit || s.source)}</span><span>Weiter wischen →</span></div>
+</div></div>`;
 }
 
 function slideList(s, it, i, n) {
@@ -238,7 +253,8 @@ async function shoot(page, html, out, w, h) {
   } else if (spec.template === 'carousel') {
     const base = out.replace(/\.jpg$/i, '');
     const items = (spec.items || []).slice(0, 8);
-    const slides = [newsType({ ...spec.cover, artist: spec.cover.artist || '', source: spec.source, date: spec.date })]
+    const cov = { ...spec.cover, artist: spec.cover.artist || '', source: spec.cover.credit ? `${spec.source} · ${spec.cover.credit}` : spec.source, date: spec.date };
+    const slides = [cov.photo ? newsPhoto(cov) : newsType(cov)]
       .concat(items.map((it, i) => it.rows ? slideList(spec, it, i + 1, items.length) : slideItem(spec, it, i + 1, items.length)), [slideOutro()]);
     for (let i = 0; i < slides.length; i++) {
       const f = `${base}-${i + 1}.jpg`;
