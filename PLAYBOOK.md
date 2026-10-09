@@ -36,13 +36,22 @@ Phase: **Aufbau bis Traktion** (Ziel 2.500 Follower). Reichweite bei Nicht-Follo
 | Slot | Zeitfenster | Inhalt | Format |
 |---|---|---|---|
 | A | beste Stunde 07–13 Uhr | stärkste Story des Tages | **Reel** (`format: "reel"`, immer `type: "REEL"`, keine Trial Reels) |
-| B | beste Stunde 16–21 Uhr (≥ 5 h nach A) | zweite Story – oder an Wochenformat-Tagen das Karussell | News-Bild / Karussell |
+| B | beste Stunde 16–21 Uhr (≥ 5 h nach A) | zweite Story – oder an Wochenformat-Tagen das Wochenformat | **News-Karussell** (siehe unten) / Wochenformat-Karussell |
+
+**News-Karussell (Standard für Slot B, Entscheidung Nik 09.10.2026 – Einzelbilder nur noch, wenn die Story für 3 Slides zu dünn ist):**
+`template: "carousel"`, 3–6 Slides plus automatischer Outro-Slide:
+1. **Cover** mit Foto (`cover.photo`, `cover.artist`, `cover.credit`): Headline + Subline wie beim News-Bild.
+2. **2–4 Fakten-Slides**, je ein Aspekt: Was genau passiert ist · Termine/Tracklist als Liste (`rows`) · Tickets/Preise/Vorverkauf · Hintergrund/Kontext („Warum das wichtig ist“) · Zitat (nur wörtlich belegt).
+3. Abwechslung: mindestens ein Fakten-Slide mit eigenem Foto (`photo`, `credit`) – **nicht dasselbe Foto wie auf dem Cover**, lieber ein zweites Artist-Foto, Release-Cover, Venue-/Festival- oder Stimmungsfoto. Gibt es kein zweites Foto, die Fakten-Slides als Text-Slides lassen.
+4. Jede Aussage auf den Slides muss im Quellartikel stehen. Nichts strecken, um Slides zu füllen.
+5. Alt-Text pro Slide (`mediaAltText` in Slide-Reihenfolge), Caption wie gewohnt; letzte Caption-Zeile vor der Quelle: „Wisch durch für alle Details.“
+Auch die Reels in Slot A dürfen auf ein Karussell zum selben Thema verweisen („Alle Termine im Karussell“), wenn Slot B dasselbe Thema hat – sonst nicht.
 
 **Wochenformate (Slot B):**
 - **Montag – „Tour-Radar“:** Karussell mit anstehenden DACH-Terminen (neue Ankündigungen der letzten 7 Tage zuerst, sonst die nächsten Highlights aus `data/tours.json`). Ein Slide pro Termin: kicker = Land (DE/AT/CH), title = Artist, detail = Stadt + Venue, meta = Datum + Ticketinfo. Österreich und die Schweiz bewusst mitnehmen – dort gibt es kaum Konkurrenz.
 - **Mittwoch – „Hintergrund“:** Karussell „Wer ist …?“ aus `library/profiles.json` (`make-profile.js`), bevorzugt ein Artist, der gerade in den News ist. Neue Profile nur mit belegten Fakten.
-- **Freitag – „New Music Friday“:** Karussell mit den 5–8 wichtigsten Releases der Woche (kicker = SINGLE/EP/ALBUM, title = Titel, detail = Artist, meta = Label).
-- **Sonntag – „Die Woche in 5 News“:** Karussell aus den 5 stärksten Posts der Woche (`posted.json`).
+- **Freitag – „New Music Friday“:** Karussell mit den 5–8 wichtigsten Releases der Woche (kicker = SINGLE/EP/ALBUM, title = Titel, detail = Artist, meta = Label), **jeder Slide mit Release-Cover** (`items[].photo` über `cover`-Requests).
+- **Sonntag – „Die Woche in 5 News“:** Karussell aus den 5 stärksten Posts der Woche (`posted.json`), jeder Slide mit dem Foto des jeweiligen Posts (`items[].photo`).
 Findet sich für ein Wochenformat nicht genug Belegtes (mind. 3 Items), stattdessen normales News-Bild.
 
 **Ticket-Alarm:** Startet ein Vorverkauf für eine DACH-Show/ein DACH-Festival, ist das eine Top-Story (wird oft geteilt). Headline z. B. „Vorverkauf startet: …“, Caption mit „Schick das deiner Rave-Crew“.
