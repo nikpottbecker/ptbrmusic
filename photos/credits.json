@@ -19,11 +19,6 @@
   "license": "Release-Cover (redaktionelle Nutzung)",
   "page": "https://music.apple.com/de/album/signals/6789659241?uo=4"
  },
- "fred-again.jpg": {
-  "credit": "Foto: Raph_PH / CC BY 4.0",
-  "license": "CC BY 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:FredAgainCPBowl100825-28_(54714087200).jpg"
- },
  "four-tet.jpg": {
   "credit": "Foto: Chris Pimlott / CC BY-SA 3.0",
   "license": "CC BY-SA 3.0",
@@ -54,11 +49,6 @@
   "license": "CC0",
   "page": "https://commons.wikimedia.org/wiki/File:Black_Coffee_perfoming_at_H%C3%AF_Ibiza_in_June_2018.jpg"
  },
- "fisher.jpg": {
-  "credit": "Foto: The original uploader was Tdmalone at English Wikipedia. / CC BY-SA 2.5",
-  "license": "CC BY-SA 2.5",
-  "page": "https://commons.wikimedia.org/wiki/File:Fisher_ACT_shops.jpg"
- },
  "dom-dolla.jpg": {
   "credit": "Foto: Shevin Dissanayake / CC0",
   "license": "CC0",
@@ -69,11 +59,6 @@
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Charlotte_de_witte-1513626416.jpg"
  },
- "amelie-lens.jpg": {
-  "credit": "Foto: Rayukk / CC BY-SA 4.0",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Amelie_Lens_06_2022.jpg"
- },
  "boris-brejcha.jpg": {
   "credit": "Foto: Gauvain / CC BY-SA 4.0",
   "license": "CC BY-SA 4.0",
@@ -83,11 +68,6 @@
   "credit": "Foto: Superbass / CC BY-SA 4.0",
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:1LIVE_Krone_2014_Fritz_Kalkbrenner_(cropped).jpg"
- },
- "solomun.jpg": {
-  "credit": "Foto: Orce Wiki / CC BY-SA 4.0",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:MakeDox_17_-_Doc_Talks_Under_the_Fig_Tree_-_Day_5,_Zoran_Solomun_01.jpg"
  },
  "ben-boehmer.jpg": {
   "credit": "Foto: Ammaarahk95 / CC BY-SA 4.0",
@@ -129,11 +109,6 @@
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Disclosure.jpg"
  },
- "bicep.jpg": {
-  "credit": "Foto: petechons / CC BY-SA 2.5",
-  "license": "CC BY-SA 2.5",
-  "page": "https://commons.wikimedia.org/wiki/File:Kelly_Lynn_bicep_flex_medial_bicipital_groove.jpg"
- },
  "keinemusik.jpg": {
   "credit": "Foto: Tdierich / CC BY-SA 4.0",
   "license": "CC BY-SA 4.0",
@@ -148,11 +123,6 @@
   "credit": "Foto: ObAnyma / CC0",
   "license": "CC0",
   "page": "https://commons.wikimedia.org/wiki/File:Anyma_Afterlife_Printworks.jpg"
- },
- "floating-points.jpg": {
-  "credit": "Foto: basic_sounds / CC BY-SA 2.0",
-  "license": "CC BY-SA 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Floating_Points_(2011).jpg"
  },
  "nia-archives.jpg": {
   "credit": "Foto: Michielderoo / CC0",
@@ -169,14 +139,14 @@
   "license": "CC BY-SA 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Fatboy_Slim_(2006).jpg"
  },
- "generic-club-crowd.jpg": {
-  "credit": "Foto: Conne Island / CC BY 2.0",
-  "license": "CC BY 2.0",
-  "page": "https://www.flickr.com/photos/58376206@N02/7892723910"
- },
  "generic-dj-booth.jpg": {
   "credit": "Foto: deejayres / CC BY 2.0",
   "license": "CC BY 2.0",
   "page": "https://www.flickr.com/photos/32798799@N00/212284891"
+ },
+ "fred-again_theo-batterham.jpg": {
+  "credit": "Foto: Theo Batterham",
+  "license": "siehe ältere Posts",
+  "page": ""
  }
 }

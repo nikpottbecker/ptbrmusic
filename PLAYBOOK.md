@@ -110,7 +110,7 @@ Die Shell kommt nicht an fremde Websites. Fotos holt deshalb die GitHub Action �
 3. Warten, bis die Action fertig ist: alle 15 s `git pull --rebase origin sidechain-media`, bis ein Commit „Fotos geholt" kommt (max. 4 min). Ergebnis in `photos/queue.result.json`; Credits stehen in `photos/credits.json`.
 4. Jedes Foto ansehen (Read): Passt es zur Person/zum Thema? Kein falscher Artist, keine Wasserzeichen, nichts Peinliches. Sonst nächste Quelle.
 5. **Tabu:** Fotos aus Google-Bildersuche, Instagram, Getty/Agenturen, Nachrichtenartikeln ohne Pressefreigabe, KI-generierte Fotos echter Personen. Findet sich kein erlaubtes Foto, eine andere Story nehmen – oder ein Stimmungsfoto über Openverse.
-6. Fotos bleiben in `photos/` (Wiederverwendung), nicht löschen.
+6. Fotos bleiben in `photos/` (Wiederverwendung), nicht löschen. `photos/rejected.json` listet Treffer, die falsch waren – für diese Artists mit genauerem Suchbegriff neu anfragen (z. B. „Bicep duo Belfast“, „Fisher DJ Paul Fisher“, „Solomun DJ Mladen“) oder Cover nehmen.
 
 ## 7. Hochladen & einplanen
 1. Dateien nach `media/<JJJJ-MM-TT>-<slug>…` kopieren, committen, `git push origin sidechain-media`. Commit-Messages enden mit den Attributionszeilen aus dem System-Reminder der Session.
