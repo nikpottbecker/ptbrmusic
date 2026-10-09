@@ -1,0 +1,42 @@
+[
+ {
+  "file": "paul-kalkbrenner.jpg",
+  "status": "ok",
+  "size": "1600x1363",
+  "credit": "Foto: pitpony.photography / CC BY-SA 3.0",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Paul_Kalkbrenner_2016_(1_von_3)_(cropped).jpg"
+ },
+ {
+  "file": "purple-disco-machine.jpg",
+  "status": "ok",
+  "size": "1600x1067",
+  "credit": "Foto: Fyrtaarn / CC BY-SA 4.0",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Purple_Disco_Machine_(4)_New_Pop_Festival_2025_Kurhaus_Baden-Baden_TR254509_2025-09-18_yj.jpg"
+ },
+ {
+  "file": "roni-size.jpg",
+  "status": "ok",
+  "size": "1600x1067",
+  "credit": "Foto: neomusicstore / CC BY 2.0",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Roni_Size_09.jpg"
+ },
+ {
+  "file": "cover-dusky-signals.jpg",
+  "status": "ok",
+  "size": "1400x1400",
+  "credit": "Cover: Signals – Dusky",
+  "license": "Release-Cover (redaktionelle Nutzung)",
+  "page": "https://music.apple.com/de/album/signals/6789659241?uo=4"
+ },
+ {
+  "file": "generic-club-crowd.jpg",
+  "status": "not_found",
+  "request": {
+   "file": "generic-club-crowd.jpg",
+   "openverse": "techno club crowd lights"
+  }
+ }
+]
