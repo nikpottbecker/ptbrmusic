@@ -1,0 +1,27 @@
+name: Sidechain Fotos holen
+on:
+  push:
+    branches: [sidechain-media]
+    paths: [photos/queue.json]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: fetch-photos
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-actions[bot]'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: sidechain-media
+      - name: Fotos laden
+        run: pip install -q pillow && python3 tools/fetch_photos.py
+      - name: Committen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add photos
+          git commit -m "Fotos geholt" || exit 0
+          git pull --rebase origin sidechain-media
+          git push origin HEAD:sidechain-media
