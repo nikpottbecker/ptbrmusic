@@ -1,50 +1,26 @@
 [
  {
-  "file": "marlon-hoffstadt.jpg",
-  "status": "not_found",
-  "request": {
-   "file": "marlon-hoffstadt.jpg",
-   "commons": "Marlon Hoffstadt"
-  }
- },
- {
-  "file": "cover-guetta-hoffstadt-caught-up.jpg",
+  "file": "cover-caught-up.jpg",
   "status": "ok",
   "size": "1400x1400",
-  "credit": "Cover: Makina Time - Single – Dimitri Vegas & Like Mike, Marlon Hoffstadt & DJ Konik",
+  "credit": "Cover: Somebody That I Used To Know (ARTBAT x David Guetta Mix) [feat. Gotye & Kimbra] - Single – ARTBAT & David Guetta",
   "license": "Release-Cover (redaktionelle Nutzung)",
-  "page": "https://music.apple.com/de/album/makina-time-single/1861772188?uo=4"
+  "page": "https://music.apple.com/de/album/somebody-that-i-used-to-know-artbat-x-david-guetta/6793767980?uo=4"
  },
  {
   "file": "robyn.jpg",
   "status": "not_found",
   "request": {
    "file": "robyn.jpg",
-   "commons": "Robyn singer"
+   "commons": "Robyn Swedish singer"
   }
  },
  {
-  "file": "palms-trax.jpg",
+  "file": "marlon-hoffstadt.jpg",
   "status": "not_found",
   "request": {
-   "file": "palms-trax.jpg",
-   "commons": "Palms Trax"
+   "file": "marlon-hoffstadt.jpg",
+   "commons": "Marlon Hoffstadt DJ"
   }
- },
- {
-  "file": "burna-boy.jpg",
-  "status": "ok",
-  "size": "1274x1338",
-  "credit": "Foto: Nuță Lucian from Cluj-Napoca, Romania / CC BY-SA 2.0",
-  "license": "CC BY-SA 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Untold_2024_-Burna_Boy_(53927293629)_(cropped).jpg"
- },
- {
-  "file": "bad-bunny.jpg",
-  "status": "ok",
-  "size": "1057x1600",
-  "credit": "Foto: Toglenn / CC BY-SA 4.0",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Bad_Bunny_2019_by_Glenn_Francis_(cropped).jpg"
  }
 ]
