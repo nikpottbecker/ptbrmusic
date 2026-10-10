@@ -341,5 +341,27 @@
   "photo": "paul-kalkbrenner.jpg",
   "metricool_id": 391750414,
   "note": "Neuauflage – am 07.10. am Metricool-Limit gescheitert"
+ },
+ {
+  "date": "2026-10-10 10:00",
+  "slot": "A",
+  "format": "reel",
+  "artist": "David Guetta & Marlon Hoffstadt",
+  "headline": "Hoffstadt & Guetta: erster gemeinsamer Track",
+  "source_url": "https://djmag.com/news/david-guetta-and-marlon-hoffstadt-share-collaborative-single-caught-listen",
+  "photo": "photos/david-guetta.jpg",
+  "metricool_id": "392557756",
+  "status": "scheduled"
+ },
+ {
+  "date": "2026-10-10 18:00",
+  "slot": "B",
+  "format": "carousel",
+  "artist": "GTA VI (Burna Boy, Palms Trax, Robyn, Bad Bunny, Fred again..)",
+  "headline": "GTA 6: Palms Trax und Burna Boy moderieren einen Radiosender",
+  "source_url": "https://djmag.com/news/gta-6-radio-stations-be-hosted-robyn-palms-trax-bad-bunny-more",
+  "photo": "photos/burna-boy.jpg, photos/fred-again_theo-batterham.jpg",
+  "metricool_id": "392557795",
+  "status": "scheduled"
  }
 ]
