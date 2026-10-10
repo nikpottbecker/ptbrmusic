@@ -1,267 +1,50 @@
 [
  {
-  "file": "fred-again.jpg",
-  "status": "ok",
-  "size": "1600x1093",
-  "credit": "Foto: Raph_PH / CC BY 4.0",
-  "license": "CC BY 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:FredAgainCPBowl100825-28_(54714087200).jpg"
- },
- {
-  "file": "four-tet.jpg",
-  "status": "ok",
-  "size": "1270x1600",
-  "credit": "Foto: Chris Pimlott / CC BY-SA 3.0",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Four_Tet_2004-04-04_(cropped).jpg"
- },
- {
-  "file": "skrillex.jpg",
-  "status": "ok",
-  "size": "1182x1600",
-  "credit": "Foto: Weekly Dig / CC BY 2.0",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Skrillex.jpg"
- },
- {
-  "file": "jamie-xx.jpg",
-  "status": "ok",
-  "size": "1600x1067",
-  "credit": "Foto: Jordan Uhl / CC BY 2.0",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Jamie_xx_-_8_June_2016.jpg"
- },
- {
-  "file": "overmono.jpg",
-  "status": "ok",
-  "size": "1600x1205",
-  "credit": "Foto: ManoSolo13241324 / CC BY-SA 4.0",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Overmono_2023.jpg"
- },
- {
-  "file": "peggy-gou.jpg",
-  "status": "ok",
-  "size": "1068x1600",
-  "credit": "Foto: DAVIDE GUIDONE / Public domain",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Peggy_Gou_2019.jpg"
- },
- {
-  "file": "black-coffee.jpg",
-  "status": "ok",
-  "size": "1217x1600",
-  "credit": "Foto: DeepBluuue / CC0",
-  "license": "CC0",
-  "page": "https://commons.wikimedia.org/wiki/File:Black_Coffee_perfoming_at_H%C3%AF_Ibiza_in_June_2018.jpg"
- },
- {
-  "file": "fisher.jpg",
-  "status": "ok",
-  "size": "1600x1200",
-  "credit": "Foto: The original uploader was Tdmalone at English Wikipedia. / CC BY-SA 2.5",
-  "license": "CC BY-SA 2.5",
-  "page": "https://commons.wikimedia.org/wiki/File:Fisher_ACT_shops.jpg"
- },
- {
-  "file": "dom-dolla.jpg",
-  "status": "ok",
-  "size": "1600x1068",
-  "credit": "Foto: Shevin Dissanayake / CC0",
-  "license": "CC0",
-  "page": "https://commons.wikimedia.org/wiki/File:Dom_Dolla_-_@shevindphoto.jpg"
- },
- {
-  "file": "charlotte-de-witte.jpg",
-  "status": "ok",
-  "size": "1285x1600",
-  "credit": "Foto: Alan Overbeek / CC BY-SA 4.0",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Charlotte_de_witte-1513626416.jpg"
- },
- {
-  "file": "amelie-lens.jpg",
-  "status": "ok",
-  "size": "1600x1170",
-  "credit": "Foto: Rayukk / CC BY-SA 4.0",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Amelie_Lens_06_2022.jpg"
- },
- {
-  "file": "boris-brejcha.jpg",
-  "status": "ok",
-  "size": "1600x1067",
-  "credit": "Foto: Gauvain / CC BY-SA 4.0",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Boris_brejcha_2017_03_12.jpg"
- },
- {
-  "file": "fritz-kalkbrenner.jpg",
-  "status": "ok",
-  "size": "1102x1600",
-  "credit": "Foto: Superbass / CC BY-SA 4.0",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:1LIVE_Krone_2014_Fritz_Kalkbrenner_(cropped).jpg"
- },
- {
-  "file": "solomun.jpg",
-  "status": "ok",
-  "size": "1067x1600",
-  "credit": "Foto: Orce Wiki / CC BY-SA 4.0",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:MakeDox_17_-_Doc_Talks_Under_the_Fig_Tree_-_Day_5,_Zoran_Solomun_01.jpg"
- },
- {
-  "file": "ben-boehmer.jpg",
-  "status": "ok",
-  "size": "1067x1600",
-  "credit": "Foto: Ammaarahk95 / CC BY-SA 4.0",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:BenB%C3%B6hmer7444_(1).jpg"
- },
- {
-  "file": "monolink.jpg",
-  "status": "ok",
-  "size": "1067x1600",
-  "credit": "Foto: https://www.hailleyhoward.com/ / CC BY-SA 4.0",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Monolink_byHailleyHoward-8613.jpg"
- },
- {
-  "file": "martin-garrix.jpg",
-  "status": "ok",
-  "size": "1064x1600",
-  "credit": "Foto: Moiyeah / CC BY-SA 4.0",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Martin_Garrix_-_Superbloom_Festival_2023_-_DSC2689.jpg"
- },
- {
-  "file": "swedish-house-mafia.jpg",
-  "status": "ok",
-  "size": "1600x1067",
-  "credit": "Foto: Parlophone Music Sweden / CC BY 3.0",
-  "license": "CC BY 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Swedish_House_Mafia_2012-06-16_001.jpg"
- },
- {
-  "file": "calvin-harris.jpg",
-  "status": "ok",
-  "size": "1600x1067",
-  "credit": "Foto: Carlos Delgado / CC BY-SA 3.0",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Calvin_Harris_-_Rock_in_Rio_Madrid_2012_-_03.jpg"
- },
- {
-  "file": "david-guetta.jpg",
-  "status": "ok",
-  "size": "1122x1600",
-  "credit": "Foto: Junta de Andalucía / CC BY-SA 2.0",
-  "license": "CC BY-SA 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:2023-11-16_Gala_de_los_Latin_Grammy,_22_(David_Guetta).jpg"
- },
- {
-  "file": "eric-prydz.jpg",
-  "status": "ok",
-  "size": "858x1279",
-  "credit": "Foto: Haydn Curtis / CC BY 2.0",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Eric_Prydz_at_Glastonbury_2009.jpg"
- },
- {
-  "file": "disclosure.jpg",
-  "status": "ok",
-  "size": "1600x798",
-  "credit": "Foto: Batiste Safont / CC BY-SA 4.0",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Disclosure.jpg"
- },
- {
-  "file": "bicep.jpg",
-  "status": "ok",
-  "size": "911x894",
-  "credit": "Foto: petechons / CC BY-SA 2.5",
-  "license": "CC BY-SA 2.5",
-  "page": "https://commons.wikimedia.org/wiki/File:Kelly_Lynn_bicep_flex_medial_bicipital_groove.jpg"
- },
- {
-  "file": "keinemusik.jpg",
-  "status": "ok",
-  "size": "1280x1600",
-  "credit": "Foto: Tdierich / CC BY-SA 4.0",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Keinemusik_Berlin_2025.jpg"
- },
- {
-  "file": "koelsch.jpg",
-  "status": "ok",
-  "size": "1600x1600",
-  "credit": "Foto: Robin Krahl / CC BY-SA 4.0",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:2015-07-19_6748_K%C3%B6lsch_(Sea_You).jpg"
- },
- {
-  "file": "anyma.jpg",
-  "status": "ok",
-  "size": "1600x1067",
-  "credit": "Foto: ObAnyma / CC0",
-  "license": "CC0",
-  "page": "https://commons.wikimedia.org/wiki/File:Anyma_Afterlife_Printworks.jpg"
- },
- {
-  "file": "floating-points.jpg",
-  "status": "ok",
-  "size": "1600x1166",
-  "credit": "Foto: basic_sounds / CC BY-SA 2.0",
-  "license": "CC BY-SA 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Floating_Points_(2011).jpg"
- },
- {
-  "file": "nia-archives.jpg",
-  "status": "ok",
-  "size": "1600x1212",
-  "credit": "Foto: Michielderoo / CC0",
-  "license": "CC0",
-  "page": "https://commons.wikimedia.org/wiki/File:Nia_Archives_2024-11-16_Amsterdam.jpg"
- },
- {
-  "file": "chase-status.jpg",
-  "status": "ok",
-  "size": "1600x1067",
-  "credit": "Foto: Sven Volkens / CC BY-SA 4.0",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Chase_and_Status-SMS-2018-15.jpg"
- },
- {
-  "file": "fatboy-slim.jpg",
-  "status": "ok",
-  "size": "957x1176",
-  "credit": "Foto: \"daniel m\" / CC BY-SA 2.0",
-  "license": "CC BY-SA 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Fatboy_Slim_(2006).jpg"
- },
- {
-  "file": "generic-club-crowd.jpg",
-  "status": "ok",
-  "size": "1024x768",
-  "credit": "Foto: Conne Island / CC BY 2.0",
-  "license": "CC BY 2.0",
-  "page": "https://www.flickr.com/photos/58376206@N02/7892723910"
- },
- {
-  "file": "generic-festival-stage.jpg",
-  "status": "error",
-  "error": "HTTP Error 403: Forbidden",
+  "file": "marlon-hoffstadt.jpg",
+  "status": "not_found",
   "request": {
-   "file": "generic-festival-stage.jpg",
-   "openverse": "electronic music festival stage"
+   "file": "marlon-hoffstadt.jpg",
+   "commons": "Marlon Hoffstadt"
   }
  },
  {
-  "file": "generic-dj-booth.jpg",
+  "file": "cover-guetta-hoffstadt-caught-up.jpg",
   "status": "ok",
-  "size": "1024x768",
-  "credit": "Foto: deejayres / CC BY 2.0",
-  "license": "CC BY 2.0",
-  "page": "https://www.flickr.com/photos/32798799@N00/212284891"
+  "size": "1400x1400",
+  "credit": "Cover: Makina Time - Single – Dimitri Vegas & Like Mike, Marlon Hoffstadt & DJ Konik",
+  "license": "Release-Cover (redaktionelle Nutzung)",
+  "page": "https://music.apple.com/de/album/makina-time-single/1861772188?uo=4"
+ },
+ {
+  "file": "robyn.jpg",
+  "status": "not_found",
+  "request": {
+   "file": "robyn.jpg",
+   "commons": "Robyn singer"
+  }
+ },
+ {
+  "file": "palms-trax.jpg",
+  "status": "not_found",
+  "request": {
+   "file": "palms-trax.jpg",
+   "commons": "Palms Trax"
+  }
+ },
+ {
+  "file": "burna-boy.jpg",
+  "status": "ok",
+  "size": "1274x1338",
+  "credit": "Foto: Nuță Lucian from Cluj-Napoca, Romania / CC BY-SA 2.0",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Untold_2024_-Burna_Boy_(53927293629)_(cropped).jpg"
+ },
+ {
+  "file": "bad-bunny.jpg",
+  "status": "ok",
+  "size": "1057x1600",
+  "credit": "Foto: Toglenn / CC BY-SA 4.0",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Bad_Bunny_2019_by_Glenn_Francis_(cropped).jpg"
  }
 ]
