@@ -6,17 +6,16 @@ Positionierung: der deutschsprachige News-Kanal für elektronische Musik – kur
 Phase: **Aufbau bis Traktion** (Ziel 2.500 Follower). Reichweite bei Nicht-Followern hat Vorrang.
 
 ## Learnings (wird jeden Sonntag von der Wochenanalyse aktualisiert – hat Vorrang vor den Regeln unten)
-- Stand 04.10.2026 (Woche 1, 29.09.–04.10.): @sidechain.news hat laut Metricool erst ~1 Follower; Reichweite pro Post 0–5, Shares/Saves/neue Follower überall 0. Alle Regeln unten sind **Tendenzen** (Stichprobe < 3 pro Gruppe oder Werte im Rauschbereich) – nicht überoptimieren, den Plan halten.
-- **Reels bleiben Slot A.** Einziges Format mit messbarer Reichweite (3 Reels: Ø 3,3 Reichweite / 6,3 Views vs. 9 Bild-/Karussell-Posts: Ø 0,2 / 3,4). An Tagen ohne Wochenformat darf auch Slot B ein Reel sein (Test für Woche 2).
+- **Stand 11.10.2026 (Woche 2, 05.–11.10.): keine auswertbaren Daten.** Instagram ist in Metricool nicht mehr verbunden (`getBrandSettings`: „no social network connected“, Analytics leer). Von 05.10. 18 Uhr bis 10.10. sind alle 6 Feed-Posts mit „You have reached your Metricool account limit“ gescheitert; live ging nur das Purple-Disco-Machine-Reel (05.10.). Alle Regeln unten stammen aus Woche 1 (~1 Follower, Reichweite 0–5) und bleiben **Tendenzen**.
+- **Vor jedem Lauf zuerst prüfen, ob Posten überhaupt geht:** `getBrandSettings` muss instagram zeigen, und `getScheduledPosts` für gestern darf keine `status: "ERROR"` haben. Ist Instagram nicht verbunden oder meldet ein Provider „account limit“ → nichts rendern oder einplanen, in posted.json nichts als gepostet loggen und in der Zusammenfassung klar melden, dass Nik Verbindung/Kontingent prüfen muss. In Woche 2 wurden 5 Tage Arbeit für Posts erzeugt, die nie erschienen sind.
+- **Reels bleiben Slot A.** Einziges Format mit messbarer Reichweite in Woche 1 (3 Reels: Ø 3,3 Reichweite / 6,3 Views vs. 9 Bild-/Karussell-Posts: Ø 0,2 / 3,4). Der Test „auch Slot B als Reel“ steht noch aus, weil in Woche 2 nichts veröffentlicht wurde.
 - **Reel-Hook in der ersten Sekunde:** Ø Wiedergabezeit nur 1,4–2,7 s von 8 s. Reel-Headlines ≤ 45 Zeichen, Kern (Artist + Ereignis) vorne, keine Einleitung.
-- **Nicht mehr als 2 Feed-Posts pro Tag** (+ Stories). Am 01.10. liefen 5 Feed-Posts – alle mit Reichweite 0; mehr Volumen bringt bei dieser Followerzahl nichts und kannibalisiert.
-- **Hashtags strikt max. 5, immer #sidechainnews.** Die ersten Posts (Fred again.., Josh Baker/Kettama/Prospa) hatten 7 Tags inkl. #musicnews/#sidechain – nicht mehr verwenden.
-- **Keine Stories mehr (Entscheidung Nik, 09.10.2026):** Das Metricool-Gratiskontingent war ab 05.10. aufgebraucht ("account limit"), Stories verbrauchten die Hälfte. Nur noch Feed-Posts und Reels.
-- **Trial Reels scheitern:** Metricool meldet, dass der Account die Follower-Mindestzahl für Trial Reels nicht erreicht. Bis auf Weiteres nur normale Reels (`type: "REEL"`).
-- **Jeder Post braucht ein Foto (Entscheidung Nik, 09.10.2026):** reine Text-Grafiken wirken langweilig. Siehe Abschnitt 6a.
-- **Collab @thefestivalwire nur, wenn die Einladung angenommen wird:** Festival-Kalender und Fatboy Slim (beide mit Collab) hatten Reichweite 0 – die Collab hat keine Reichweite gebracht. Beibehalten (max. 3×/Woche), Wirkung nächste Woche erneut prüfen.
-- **Uhrzeiten:** Slot A um ~10 Uhr lieferte die meisten Reichweiten-Treffer (alle Reels); Bilder 13–20 Uhr fast alle 0, einzige Ausnahme Fred again.. um 21:45 (Reichweite 2). Kein belastbarer Zeiteffekt – Slot A weiter 09–11 Uhr, Slot B weiter nach `getBestTimeToPostByNetwork`.
-- **DACH-Positionierung beibehalten.** DACH-Themen (Knaack, Berlin-Erklärer, Festival-Kalender) und internationale News lagen gleich niedrig; Unterschied wegen Format nicht messbar. Festival-Kalender hatte mit 6 Views den besten Karussell-Wert – Speicher-/Service-Karussells weiter am Wochenende.
+- **Max. 2 Feed-Posts pro Tag, keine Stories (Entscheidung Nik, 09.10.).** Am 01.10. liefen 5 Feed-Posts – alle Reichweite 0. Stories verbrauchten die Hälfte des Metricool-Gratiskontingents. Bereits fehlgeschlagene Posts nicht nochmal einplanen, solange das Limit nicht geklärt ist.
+- **Nur normale Reels (`type: "REEL"`), keine Trial Reels:** Metricool meldet, dass der Account die Follower-Mindestzahl dafür nicht erreicht.
+- **Hashtags strikt max. 5, immer #sidechainnews**, kein #musicnews/#sidechain/#edm.
+- **Jeder Post braucht ein Foto (Entscheidung Nik, 09.10.)** – siehe Abschnitt 6a. Wirkung noch ungemessen (alle Foto-Posts der Woche 2 scheiterten).
+- **Collab @thefestivalwire max. 3×/Woche, Wirkung offen:** In Woche 1 hatten Festival-Kalender und Fatboy Slim mit Collab Reichweite 0; der Tour-Radar mit Collab (05.10.) wurde nie veröffentlicht. Nächste Woche erneut prüfen.
+- **Uhrzeiten & Themen unverändert:** Slot A 09–11 Uhr (alle Reichweiten-Treffer in Woche 1), Slot B nach `getBestTimeToPostByNetwork`. DACH-Positionierung beibehalten; Ticket-/Tour-News (Purple Disco Machine) und Service-Karussells am Wochenende weiter priorisieren – Effekt erst messbar, wenn wieder gepostet wird.
 
 ## Daten & Bibliothek im Repo (nutzen!)
 - `data/handles.json` – verifizierte Instagram-Handles. Für @-Erwähnungen nur Einträge mit `verified: true`. Neue, belegte Handles ergänzen (mit Quelle).
